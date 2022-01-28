@@ -8,14 +8,6 @@ tags: ["Applications", "Mobilités"]
 published: true
 ---
 
-title: Application parkings
-subtitle: Analyse des parkings hors voirie
-author: Yohann Mansiaux
-date: '2021-10-26'
-slug: apps-applications-parkings
-tags: ["Applications", "Mobilités"]
-published: true
-
 Cette application propose d'analyser les données d'occupation des parkings hors voirie de Bordeaux Métropole.
 
 Ces données sont présentes sur le portail [open data de Bordeaux Métropole](https://opendata.bordeaux-metropole.fr/explore/dataset/st_park_p/information/).
