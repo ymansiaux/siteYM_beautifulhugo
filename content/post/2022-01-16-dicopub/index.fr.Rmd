@@ -6,8 +6,10 @@ date: '2022-01-16'
 slug: tools-dicopub
 tags: ["Outils", "Données"]
 published: true
+resume_court: dicoco
 ---
 
 
 Le dictionnaire public des données de Bordeaux Métropole est disponible [ici](https://data.bordeaux-metropole.fr/dicopub/#/dico).  
 
+ 
