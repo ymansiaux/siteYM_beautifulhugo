@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Datalab Bordeaux Métropole</title>
+    <link>/page/</link>
+    <description>Recent content in Pages on Datalab Bordeaux Métropole</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster><atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A propos</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/page/about/</guid>
+      <description>Blablabla</description>
+    </item>
+    
+    <item>
+      <title>Bienvenue</title>
+      <link>/page/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/page/home/</guid>
+      <description>Le datalab est une plateforme d’analyse et de valorisation des données, à destination des métiers, des agents de Bordeaux Métropole et des agents des communes mutualisées.
+Notre activité s’oriente autour de 3 grandes axes :
+La publication d’applications / tableaux de bords interactifsLa réalisation articles d’analyses de données, qu’elles proviennent d’open data, de données métiers ou de sources externesLa fourniture d’outils et services en utilisation libre pour comprendre / exploiter / visualiser les donnéesPour suivre notre travail cliquez ci-dessous !</description>
+    </item>
+    
+  </channel>
+</rss>

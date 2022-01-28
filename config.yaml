@@ -1,6 +1,7 @@
-baseurl: https://username.github.io
-DefaultContentLanguage: en
-title: Beautiful Hugo
+baseurl: /
+relativeurls: true
+DefaultContentLanguage: fr
+title: Datalab Bordeaux Métropole
 theme: beautifulhugo
 metaDataFormat: yaml
 pygmentsStyle: trac
@@ -12,47 +13,23 @@ Params:
   commit: no
   dateFormat: January 2, 2006
   delayDisqus: yes
-  favicon: img/favicon.ico
-  logo: img/avatar-icon.png
+  favicon: img/LogoDataLab.ico
+  logo: img/LogoDataLab.svg
   mainSections:
     - post
     - posts
   readingTime: yes
   rss: yes
   showRelatedPosts: yes
-  socialShare: yes
+  socialShare: false
   subtitle: Build a beautiful and simple website in minutes
   useHLJS: yes
   wordCount: yes
 Author:
-  500px: username
-  bandcamp: username
-  bitbucket: username
-  codepen: username
-  email: youremail@domain.com
-  facebook: username
-  github: username
-  gitlab: username
-  instagram: username
-  itchio: username
-  kaggle: username
-  linkedin: username
-  mastodon: url
-  name: Some Person
-  paypal: username
-  reddit: username
-  slack: username
-  snapchat: username
-  soundcloud: username
-  spotify: username
-  stackoverflow: users/XXXXXXX/username
-  telegram: username
-  twitter: username
-  vk: username
-  website: yourwebsite.com
-  weibo: username
-  xing: username
-  youtube: user/username
+  email: y.mansiaux@bordeaux-metropole.fr
+  github: github.com/ymansiaux
+  gitlab: https://gitlab.com/bordeaux-metropole-public
+  name: Yohann Mansiaux
 menu:
   main:
     - name: Accueil
