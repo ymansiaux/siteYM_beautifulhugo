@@ -1,0 +1,23 @@
+---
+title: "Bienvenue"
+subtitle: "Coucou"
+comments: false
+---
+
+Les applis : 
+
+<a href="/tags/applications/">
+  Apps
+</a>
+
+Le blog : 
+
+<a href="/tags/articles/">
+  Blog
+</a>
+
+Les outils  : 
+
+<a href="/tags/outils/">
+  Outils
+</a>

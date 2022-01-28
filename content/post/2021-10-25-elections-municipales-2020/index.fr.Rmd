@@ -1,0 +1,13 @@
+---
+title: Elections municipales 2020
+subtitle: Analyse des résultats des élections municipales 2020 à Bordeaux
+author: Yohann Mansiaux
+date: '2021-10-25'
+slug: apps-elections-municipales-2020
+tags: ["Applications", "societe"]
+published: true
+---
+
+L'application de consultation des résultats est consultable ici :
+
+<p><a href="https://rstudio-connect.bordeaux-it.fr/elections2020/" target="_blank" rel="noopener noreferrer" class="button">Accéder à l'application</a></p>
