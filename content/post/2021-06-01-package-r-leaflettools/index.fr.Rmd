@@ -1,0 +1,18 @@
+---
+title: Package R leaflettools
+subtitle: Extensions pour leaflet
+author: Yohann Mansiaux
+date: '2021-06-01'
+slug: tools-leafletools
+tags: ["Outils", "package R", "code"]
+published: true
+---
+
+Ce package propose l'ajout d'extensions pour le package de cartographie leaflet.
+
+En l'état, une seule extension est implémentée. La fonction addBezierCurve permet d'ajouter des courbes incurvées entre 2 points.
+
+Le code est largement inspiré d'un [code JavaScript](https://ryancatalani.medium.com/creating-consistently-curved-lines-on-leaflet-b59bc03fa9dc).
+
+Le package R est librement téléchargeable sur [ma page github](https://github.com/ymansiaux/leaflettools/blob/master/R/addBezierCurve.R). 
+

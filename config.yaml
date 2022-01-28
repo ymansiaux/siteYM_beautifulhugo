@@ -55,27 +55,15 @@ Author:
   youtube: user/username
 menu:
   main:
-    - name: Blog
-      url: ''
+    - name: Accueil
+      url: page/home
       weight: 1
-    - name: About
+    - name: Tous les contenus
+      url: ''
+      weight: 2
+    - name: A propos
       url: page/about/
       weight: 3
-    - identifier: samples
-      name: Samples
-      weight: 2
-    - name: Big Image Sample
-      parent: samples
-      url: post/2017-03-07-bigimg-sample
-      weight: 1
-    - name: Math Sample
-      parent: samples
-      url: post/2017-03-05-math-sample
-      weight: 2
-    - name: Code Sample
-      parent: samples
-      url: post/2016-03-08-code-sample
-      weight: 3
-    - name: Tags
+    - name: Mots clés
       url: tags
-      weight: 3
+      weight: 4
