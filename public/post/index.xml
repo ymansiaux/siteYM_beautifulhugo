@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Beautiful Hugo</title>
+    <link>https://username.github.io/post/</link>
+    <description>Recent content in Posts on Beautiful Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://username.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dicopub</title>
+      <link>https://username.github.io/post/tools-dicopub/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-dicopub/</guid>
+      <description>Le dictionnaire public des données de Bordeaux Métropole est disponible ici.</description>
+    </item>
+    
+    <item>
+      <title>Congestion Bordeaux Métropole</title>
+      <link>https://username.github.io/post/posts-congestion/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/posts-congestion/</guid>
+      <description>Cette application propose d’analyser les données de congestion fournies par le traficolor.</description>
+    </item>
+    
+    <item>
+      <title>Package R xtradata</title>
+      <link>https://username.github.io/post/tools-xtradata/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-xtradata/</guid>
+      <description>Notre package R pour télécharger les données est disponible sur le portail open data de Bordeaux Métropole :</description>
+    </item>
+    
+    <item>
+      <title>Application parkings</title>
+      <link>https://username.github.io/post/apps-applications-parkings/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/apps-applications-parkings/</guid>
+      <description>title: Application parkings subtitle: Analyse des parkings hors voirie author: Yohann Mansiaux date: ‘2021-10-26’ slug: apps-applications-parkings tags: [“Applications”, “Mobilités”] published: true
+Cette application propose d’analyser les données d’occupation des parkings hors voirie de Bordeaux Métropole.
+Ces données sont présentes sur le portail open data de Bordeaux Métropole.
+Cet outil permet d’étudier :
+ les taux d’occupation des parkings sur 1 période d’intérêt (1 journée, 1 semaine, 1 mois ou 1 année), pour 4 grands secteurs (l’hypercentre de Bordeaux, le centre de Bordeaux, la périphérie de Bordeaux et les parcs relais).</description>
+    </item>
+    
+    <item>
+      <title>Elections municipales 2020</title>
+      <link>https://username.github.io/post/apps-elections-municipales-2020/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/apps-elections-municipales-2020/</guid>
+      <description>  L’application de consultation des résultats est consultable ici :
+ Accéder à l’application </description>
+    </item>
+    
+    <item>
+      <title>Package R shinyYM</title>
+      <link>https://username.github.io/post/tools-shinyym/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-shinyym/</guid>
+      <description>Ce package propose l’ajout d’extensions pour le package de développement Web shiny.
+Ce package permet notamment l’utilisation d’un certain nombre de notifications proposées dans la librairie Javascript notie.
+Le package R est librement téléchargeable sur ma page github.</description>
+    </item>
+    
+    <item>
+      <title>Package R leaflettools</title>
+      <link>https://username.github.io/post/tools-leafletools/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-leafletools/</guid>
+      <description>Ce package propose l’ajout d’extensions pour le package de cartographie leaflet.
+En l’état, une seule extension est implémentée. La fonction addBezierCurve permet d’ajouter des courbes incurvées entre 2 points.
+Le code est largement inspiré d’un code JavaScript.
+Le package R est librement téléchargeable sur ma page github.</description>
+    </item>
+    
+    <item>
+      <title>Package R bdxmetroidentity</title>
+      <link>https://username.github.io/post/tools-bdxmetroidentity/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-bdxmetroidentity/</guid>
+      <description>Le package bdxmetroidentity a été développé par ThinkR.
+Il fournit des outils de design dédiés aux productions data du datalab de Bordeaux Métropole. Il inclut :
+ Des fonctionnalités pour associer un thème light/dark à des graphiques {ggplot2}, Des fonctionnalités pour associer un thème light/dark à des rapports et des vignettes R Markdown, Des fonctionnalités pour associer un thème light/dark à des apps Shiny.  Le site du package est disponible ici : http://bdxmetropole.</description>
+    </item>
+    
+  </channel>
+</rss>

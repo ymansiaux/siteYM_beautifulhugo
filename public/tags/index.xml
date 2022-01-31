@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Beautiful Hugo</title>
+    <link>https://username.github.io/tags/</link>
+    <description>Recent content in Tags on Beautiful Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://username.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Données</title>
+      <link>https://username.github.io/tags/donn%C3%A9es/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/donn%C3%A9es/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Outils</title>
+      <link>https://username.github.io/tags/outils/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/outils/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Articles</title>
+      <link>https://username.github.io/tags/articles/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/articles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mobilite</title>
+      <link>https://username.github.io/tags/mobilite/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/mobilite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>https://username.github.io/tags/code/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>package R</title>
+      <link>https://username.github.io/tags/package-r/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/package-r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webservices</title>
+      <link>https://username.github.io/tags/webservices/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/webservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applications</title>
+      <link>https://username.github.io/tags/applications/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/applications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobilités</title>
+      <link>https://username.github.io/tags/mobilit%C3%A9s/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/mobilit%C3%A9s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>societe</title>
+      <link>https://username.github.io/tags/societe/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/tags/societe/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

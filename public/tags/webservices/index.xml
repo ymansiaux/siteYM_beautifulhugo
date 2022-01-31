@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webservices on Beautiful Hugo</title>
+    <link>https://username.github.io/tags/webservices/</link>
+    <description>Recent content in webservices on Beautiful Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://username.github.io/tags/webservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Package R xtradata</title>
+      <link>https://username.github.io/post/tools-xtradata/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-xtradata/</guid>
+      <description>Notre package R pour télécharger les données est disponible sur le portail open data de Bordeaux Métropole :</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Outils on Beautiful Hugo</title>
+    <link>https://username.github.io/tags/outils/</link>
+    <description>Recent content in Outils on Beautiful Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://username.github.io/tags/outils/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dicopub</title>
+      <link>https://username.github.io/post/tools-dicopub/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-dicopub/</guid>
+      <description>Le dictionnaire public des données de Bordeaux Métropole est disponible ici.</description>
+    </item>
+    
+    <item>
+      <title>Package R xtradata</title>
+      <link>https://username.github.io/post/tools-xtradata/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-xtradata/</guid>
+      <description>Notre package R pour télécharger les données est disponible sur le portail open data de Bordeaux Métropole :</description>
+    </item>
+    
+    <item>
+      <title>Package R shinyYM</title>
+      <link>https://username.github.io/post/tools-shinyym/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-shinyym/</guid>
+      <description>Ce package propose l’ajout d’extensions pour le package de développement Web shiny.
+Ce package permet notamment l’utilisation d’un certain nombre de notifications proposées dans la librairie Javascript notie.
+Le package R est librement téléchargeable sur ma page github.</description>
+    </item>
+    
+    <item>
+      <title>Package R leaflettools</title>
+      <link>https://username.github.io/post/tools-leafletools/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-leafletools/</guid>
+      <description>Ce package propose l’ajout d’extensions pour le package de cartographie leaflet.
+En l’état, une seule extension est implémentée. La fonction addBezierCurve permet d’ajouter des courbes incurvées entre 2 points.
+Le code est largement inspiré d’un code JavaScript.
+Le package R est librement téléchargeable sur ma page github.</description>
+    </item>
+    
+    <item>
+      <title>Package R bdxmetroidentity</title>
+      <link>https://username.github.io/post/tools-bdxmetroidentity/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://username.github.io/post/tools-bdxmetroidentity/</guid>
+      <description>Le package bdxmetroidentity a été développé par ThinkR.
+Il fournit des outils de design dédiés aux productions data du datalab de Bordeaux Métropole. Il inclut :
+ Des fonctionnalités pour associer un thème light/dark à des graphiques {ggplot2}, Des fonctionnalités pour associer un thème light/dark à des rapports et des vignettes R Markdown, Des fonctionnalités pour associer un thème light/dark à des apps Shiny.  Le site du package est disponible ici : http://bdxmetropole.</description>
+    </item>
+    
+  </channel>
+</rss>
