@@ -33,10 +33,10 @@ Author:
 menu:
   main:
     - name: Accueil
-      url: page/home
+      url: ''
       weight: 1
     - name: Tous les contenus
-      url: ''
+      url: blog/
       weight: 2
     - name: A propos
       url: page/about/
