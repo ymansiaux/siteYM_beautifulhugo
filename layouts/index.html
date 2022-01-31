@@ -1,5 +1,28 @@
 {{ define "main" }}
+
+<style>
+  #box-container {
+    height:80px;
+    width:75%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-yo {
+    height : 45px;
+  }
+</style>
+
 <body>
+    
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+
   <p>Le datalab est une plateforme d’analyse et de valorisation des données, à destination des métiers, des agents de Bordeaux Métropole et des agents des communes mutualisées.</p>
 <p>Notre activité s’oriente autour de 3 grandes axes :</p>
 <ul>
@@ -23,21 +46,7 @@
 </button>
 -->
 <!-- faire un flexbox et des petites boites -->
-<style>
-  #box-container {
-    height:80px;
-    width:75%;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-  .btn-yo {
-    height : 45px;
-  }
-</style>
 <div id="box-container">
 <div>
 <p><button type="button" class="btn btn-secondary btn-yo">
@@ -56,7 +65,9 @@
 </div>
 </div>
 
-
+</div>
+</div>
+</div>
 
 
 </body>
