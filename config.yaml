@@ -1,6 +1,7 @@
 baseurl: /
 relativeurls: true
 DefaultContentLanguage: fr
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 title: Datalab Bordeaux Métropole
 theme: beautifulhugo
 metaDataFormat: yaml
@@ -44,3 +45,8 @@ menu:
     - name: Mots clés
       url: tags
       weight: 4
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
