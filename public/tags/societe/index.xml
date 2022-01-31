@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>societe on Beautiful Hugo</title>
-    <link>https://username.github.io/tags/societe/</link>
-    <description>Recent content in societe on Beautiful Hugo</description>
+    <title>societe on Datalab Bordeaux Métropole</title>
+    <link>/tags/societe/</link>
+    <description>Recent content in societe on Datalab Bordeaux Métropole</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
-    <webMaster>youremail@domain.com (Some Person)</webMaster>
-    <lastBuildDate>Mon, 25 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://username.github.io/tags/societe/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Mon, 25 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/societe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Elections municipales 2020</title>
-      <link>https://username.github.io/post/apps-elections-municipales-2020/</link>
+      <link>/post/apps-elections-municipales-2020/</link>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Some Person)</author>
-      <guid>https://username.github.io/post/apps-elections-municipales-2020/</guid>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/apps-elections-municipales-2020/</guid>
       <description>  L’application de consultation des résultats est consultable ici :
  Accéder à l’application </description>
     </item>

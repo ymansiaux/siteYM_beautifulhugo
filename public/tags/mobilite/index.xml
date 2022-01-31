@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+<<<<<<< HEAD
     <title>mobilite on Beautiful Hugo</title>
     <link>https://username.github.io/tags/mobilite/</link>
     <description>Recent content in mobilite on Beautiful Hugo</description>
@@ -14,6 +15,21 @@
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Some Person)</author>
       <guid>https://username.github.io/post/posts-congestion/</guid>
+=======
+    <title>mobilite on Datalab Bordeaux Métropole</title>
+    <link>/tags/mobilite/</link>
+    <description>Recent content in mobilite on Datalab Bordeaux Métropole</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/mobilite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Congestion Bordeaux Métropole</title>
+      <link>/post/posts-congestion/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/posts-congestion/</guid>
+>>>>>>> 437a287f549fbe55c71e3b994930df9421cf487e
       <description>Cette application propose d’analyser les données de congestion fournies par le traficolor.</description>
     </item>
     

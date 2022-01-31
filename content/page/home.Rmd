@@ -1,23 +1,68 @@
 ---
 title: "Bienvenue"
-subtitle: "Coucou"
+subtitle: "Qui sommes nous ?"
 comments: false
 ---
 
-Les applis : 
+Le datalab est une plateforme d’analyse et de valorisation des données, à destination des métiers, des agents de Bordeaux Métropole et des agents des communes mutualisées.
 
-<a href="/tags/applications/">
-  Apps
-</a>
 
-Le blog : 
+Notre activité s'oriente autour de 3 grandes axes :
 
-<a href="/tags/articles/">
-  Blog
-</a>
+* La publication d'applications / tableaux de bords interactifs
+* La réalisation articles d'analyses de données, qu'elles proviennent d'open data, de données métiers ou de sources externes
+* La fourniture d'outils et services en utilisation libre pour comprendre / exploiter / visualiser les données
 
-Les outils  : 
+Pour suivre notre travail cliquez ci-dessous !
 
-<a href="/tags/outils/">
-  Outils
-</a>
+<!--
+<button type="button" class="btn btn-primary">
+    <a href="/tags/applications/">  Je veux voir les applis ! </a>
+</button>
+
+<button type="button" class="btn btn-info">
+    <a href="/tags/articles/">  Je veux voir les articles ! </a>
+</button>
+
+
+<button type="button" class="btn btn-warning">
+    <a href="/tags/outils/">  Je veux voir les outils ! </a>
+</button>
+-->
+<!-- faire un flexbox et des petites boites -->
+
+
+<style>
+  #box-container {
+    height:80px;
+    width:75%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-yo {
+    height : 45px;
+  }
+</style>
+
+<div id="box-container">
+  <div >
+  <button type="button" class="btn btn-secondary btn-yo">
+    <a href="/tags/applications/">  Je veux voir les applis ! </a>
+</button>
+</div>
+  <div>
+  <button type="button" class="btn btn-secondary btn-yo" style = "background-color:lightblue;">
+    <a href="/tags/articles/">  Je veux voir les articles ! </a>
+</button>
+  </div>
+
+<div>
+  <button type="button" class="btn btn-secondary btn-yo"  style = "background-color:lightgreen;">
+    <a href="/tags/outils/">  Je veux voir les outils ! </a>
+</button>
+  </div>
+</div>

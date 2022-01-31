@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Données on Beautiful Hugo</title>
-    <link>https://username.github.io/tags/donn%C3%A9es/</link>
-    <description>Recent content in Données on Beautiful Hugo</description>
+    <title>Données on Datalab Bordeaux Métropole</title>
+    <link>/tags/donn%C3%A9es/</link>
+    <description>Recent content in Données on Datalab Bordeaux Métropole</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
-    <webMaster>youremail@domain.com (Some Person)</webMaster>
-    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://username.github.io/tags/donn%C3%A9es/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/donn%C3%A9es/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dicopub</title>
-      <link>https://username.github.io/post/tools-dicopub/</link>
+      <link>/post/tools-dicopub/</link>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Some Person)</author>
-      <guid>https://username.github.io/post/tools-dicopub/</guid>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/tools-dicopub/</guid>
       <description>Le dictionnaire public des données de Bordeaux Métropole est disponible ici.</description>
     </item>
     

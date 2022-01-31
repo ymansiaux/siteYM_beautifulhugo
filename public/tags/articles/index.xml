@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Articles on Beautiful Hugo</title>
-    <link>https://username.github.io/tags/articles/</link>
-    <description>Recent content in Articles on Beautiful Hugo</description>
+    <title>Articles on Datalab Bordeaux Métropole</title>
+    <link>/tags/articles/</link>
+    <description>Recent content in Articles on Datalab Bordeaux Métropole</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
-    <webMaster>youremail@domain.com (Some Person)</webMaster>
-    <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://username.github.io/tags/articles/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Congestion Bordeaux Métropole</title>
-      <link>https://username.github.io/post/posts-congestion/</link>
+      <link>/post/posts-congestion/</link>
       <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Some Person)</author>
-      <guid>https://username.github.io/post/posts-congestion/</guid>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/posts-congestion/</guid>
       <description>Cette application propose d’analyser les données de congestion fournies par le traficolor.</description>
     </item>
     
