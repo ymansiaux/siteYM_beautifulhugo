@@ -11,5 +11,74 @@ published: true
 <script src="{{< blogdown/postref >}}index.fr_files/header-attrs/header-attrs.js"></script>
 
 
-<p>Cette application propose d’analyser les données de congestion fournies par le traficolor.</p>
-<p><img src="/img/posts/congestion_analyse.png"  id="pay-image"/></p>
+<!---
+Palette de couleurs et police
+-->
+<div id="analyse-du-niveau-de-congestion-à-partir-du-traficolor" class="section level2">
+<h2>Analyse du niveau de congestion à partir du traficolor</h2>
+<!---
+Fonction ggplot ppur tracer l'évolution de la congestion
+-->
+<!---
+A la journée
+-->
+<!---
+HPM
+-->
+<!---
+HPS
+-->
+<!---
+Fusion des graphes
+-->
+<p>On se propose de calculer un score de congestion journalier moyen, entre 1 et 3.</p>
+<p>Le score est calculé sur la journée entière, sur les heures pleines du matin (7h-9h) et sur les heures pleines du soir (17h-19h).</p>
+<p>On représente son évolution depuis 09/2019.</p>
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/plotFinalCongestion-1.png" width="960" /></p>
+</div>
+<div id="evolution-de-la-congestion-par-rapport-à-une-semaine-de-référence-060120---130120" class="section level2">
+<h2>Evolution de la congestion par rapport à une semaine de référence (06/01/20 - 13/01/20)</h2>
+<p>On réalise la même analyse que précédemment, en comparaison l’évolution à partir de 2020, en prenant la semaine du 6 au 13/01 pour référence.</p>
+<!---
+Fusion des graphes
+-->
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/plotFinalCongestionEvolutionSemaineRef-1.png" width="960" /></p>
+<!---
+Analyse carto
+-->
+</div>
+<div id="analyse-carto-avant-pendant-après-confinement-mars-mai-2020" class="section level2">
+<h2>Analyse carto avant / pendant / après confinement mars-mai 2020</h2>
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/printMapPreConfinement-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/printMapConfinement-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/printMapPostConfinement-1.png" width="672" /></p>
+</div>
+<div id="même-analyse-uniquement-pendant-la-plage-7h-9h-17h-19h" class="section level2">
+<h2>Même analyse uniquement pendant la plage (7h-9h, 17h-19h)</h2>
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/printMapPreConfinementHP-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/printMapConfinementHP-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/printMapPostConfinementHP-1.png" width="672" /></p>
+</div>
+<div id="analyse-des-capteurs" class="section level2">
+<h2>Analyse des capteurs</h2>
+<!---
+Fusion des graphes
+-->
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/plotEvolutionCapteurs-1.png" width="960" /></p>
+</div>
+<div id="analyse-des-temps-de-trajet" class="section level2">
+<h2>Analyse des temps de trajet</h2>
+<!---
+A la journée
+-->
+<!---
+HPM
+-->
+<!---
+HPS
+-->
+<!---
+Fusion des graphes
+-->
+<p><img src="{{< blogdown/postref >}}index.fr_files/figure-html/plotFinalTempsParcours-1.png" width="960" /></p>
+</div>
