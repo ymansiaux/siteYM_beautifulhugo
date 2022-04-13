@@ -2,7 +2,7 @@ baseurl: /
 relativeurls: true
 DefaultContentLanguage: fr
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
-title: Datalab Bordeaux Métropole
+title: Bienvenue !
 theme: beautifulhugo
 metaDataFormat: yaml
 pygmentsStyle: trac
@@ -15,7 +15,7 @@ Params:
   dateFormat: January 2, 2006
   delayDisqus: yes
   favicon: img/LogoDataLab.ico
-  logo: img/LogoDataLab.svg
+  logo: img/YM.jpg
   mainSections:
     - post
     - posts
@@ -23,7 +23,7 @@ Params:
   rss: yes
   showRelatedPosts: yes
   socialShare: false
-  subtitle: Qui sommes-nous ?
+  subtitle: Qui suis-je ?
   useHLJS: yes
   wordCount: yes
 Author:
