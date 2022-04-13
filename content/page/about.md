@@ -1,6 +1,6 @@
 ---
 comments: false
-subtitle: Les membres de l'équipe
+subtitle: En quelques mots ...
 title: A propos
 ---
 
@@ -10,7 +10,7 @@ Si vous aimez la lecture barbante (même si il y a de jolies images), mon manusc
 
 J'utilise aujourd'hui moins mes compétences en statistique, mais vise plutôt à m'améliorer sur la restitution de résultats à l'attention de publics plus novices sur l'analyse de données.
 
-Mes outils principaux sont le langage R, et les outils shiny et ggplot2. 
+Mes outils principaux sont le langage R, et les packages _{shiny}_ et _{ggplot2}_. 
 
 J'ai pour objectif de continuer à m'améliorer côté dataviz et dev web, et tâcherai de publier régulièrement des travaux et analyses réalisés hors ou dans le cadre de mon activité à Bordeaux Métropole (tant qu'ils concernent des données en open data). Les packages R développés et utilisés au quotidien seront également publiés ici.
 

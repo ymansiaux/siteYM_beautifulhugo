@@ -14,5 +14,5 @@ En l'état, une seule extension est implémentée. La fonction addBezierCurve pe
 
 Le code est largement inspiré d'un [code JavaScript](https://ryancatalani.medium.com/creating-consistently-curved-lines-on-leaflet-b59bc03fa9dc).
 
-Le package R est librement téléchargeable sur [ma page github](https://github.com/ymansiaux/leaflettools/blob/master/R/addBezierCurve.R). 
+Le package R est librement téléchargeable sur [ma page github](https://github.com/ymansiaux/leaflettools). 
 

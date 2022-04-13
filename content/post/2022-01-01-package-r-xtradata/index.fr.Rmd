@@ -1,6 +1,6 @@
 ---
 title: Package R xtradata
-subtitle: Interrogation des WS BM
+subtitle: Interrogation des Webservices Bordeaux Métropole
 author: Yohann Mansiaux
 date: '2022-01-01'
 slug: tools-xtradata
@@ -8,5 +8,14 @@ tags: ["Outils", "package R", "code", "webservices"]
 published: true
 ---
 
-Notre package R pour télécharger les données est disponible sur le portail [open data de Bordeaux Métropole](https://opendata.bordeaux-metropole.fr/explore/dataset/met_package_r/information/) : 
+Ce package R propose d'appeler les webservices Bordeaux Métropole _features_ et _aggregate_.
+
+Le webservice _features_ propose de renvoie les données d'une couche de données, en temps réel ou dans le passé, tandis que le webservice _aggregate_ propose des calculs statistiques sur les données historisées.
+
+Ce package est disponible en téléchargement sur le portail [open data de Bordeaux Métropole](https://opendata.bordeaux-metropole.fr/explore/dataset/met_package_r/information/).
+
+Les sources sont disponibles [ici](https://github.com/ymansiaux/xtradata).
+
+Ce package est un de mes outils indispensables dans mon quotidien. La plupart des analyses que je réalise, soit sur des données internes soit sur l'open data BM, dépendent de l'utilisation de cet outil. C'est le premier package "propre" que j'ai développé et j'en suis assez content :)
+
 

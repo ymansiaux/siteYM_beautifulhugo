@@ -1,8 +1,8 @@
 ---
-title: Elections municipales 2020
-subtitle: Analyse des résultats des élections municipales 2020 à Bordeaux
+title: Historique des élections
+subtitle: Analyse des résultats des élections à Bordeaux
 author: Yohann Mansiaux
-date: '2021-10-25'
+date: '2022-04-13'
 slug: apps-elections-municipales-2020
 tags: ["Applications", "societe"]
 published: true
@@ -11,7 +11,15 @@ published: true
 <script src="{{< blogdown/postref >}}index.fr_files/header-attrs/header-attrs.js"></script>
 
 
-<p>L’application de consultation des résultats est consultable ici :</p>
-<p>
-<a href="https://rstudio-connect.bordeaux-it.fr/elections2020/" target="_blank" rel="noopener noreferrer" class="button">Accéder à l’application</a>
-</p>
+<p>Cette application Shiny propose d’observer les résultats électoraux depuis 1992 par bureaux de vote sur le territoire Métropolitain.</p>
+<p>A date, seules les données de Bordeaux sont disponibles, les données d’autres communes devraient être observables prochainement.</p>
+<p>Le jeu de données source est présent sur le site <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_resultat_a/information/" target="_blank" rel="noopener noreferrer" class="button">Open Data de Bordeaux Métropole</a>.</p>
+<p>Cette application a été intéressante à réaliser pour plusieurs raisons :</p>
+<ul>
+<li><p>La manipulation de données alphanumériques, mais également de données géographiques, en utilisant les infos de localisation des <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_bureauvote_s/information/" target="_blank" rel="noopener noreferrer" class="button">bureaux de vote</a> et des <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_lieuvote_p/information/" target="_blank" rel="noopener noreferrer" class="button">lieux de vote</a> (de Bordeaux pour le moment).</p></li>
+<li><p>L’utilisation de la programmation objet R6. Chaque élection est un objet R6 avec ses caractéristiques (la commune, le type d’élection, les candidats, les résultats ….). Ces objets R6 se baladent de modules en modules dans mon application. Ceci permet d’avoir un code plus léger, d’éviter des répétitions et rend le tout très robuste.</p></li>
+<li><p>L’utilisation de fonctions de personnalisation “avancées” de Shiny. J’ai pour la première fois incorporé du CSS, des éléments HTML (par exemple le footer de l’application), du JQuery, et ai joué avec le package <em>{bslib}</em> pour avoir un contrôle sur les variables Bootstrap.</p></li>
+</ul>
+<p>Le défaut de cette application est qu’elle a pas mal de dépendances, le contrôle des effets de bord liés à des changements de version est effectué par l’utilisation du package R <em>{renv}</em>.</p>
+<p>Cette application est consultable <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_bureauvote_s/information/" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
+<p>Le code source est présent <a href="https://github.com/ymansiaux/elections" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>

@@ -17,4 +17,4 @@ Il fournit des outils de design dédiés aux productions data du datalab de Bord
 * Des fonctionnalités pour associer un thème light/dark à des rapports et des vignettes R Markdown,
 * Des fonctionnalités pour associer un thème light/dark à des apps Shiny.
 
-Le site du package est disponible ici : http://bdxmetropole.pages.thinkr.fr/bdxmetroidentity/
+Le package est disponible [ici](https://github.com/ymansiaux/bdxmetroidentity). Une fois installé il est possible de consulter la documentation en utilisant la commande `bdxmetroidentity::open_pkgdown()`

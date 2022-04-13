@@ -12,7 +12,7 @@ pygmentsCodefencesGuessSyntax: yes
 Params:
   comments: yes
   commit: no
-  dateFormat: January 2, 2006
+  dateFormat: 02/01/2006
   delayDisqus: yes
   favicon: img/LogoDataLab.ico
   logo: img/YM.jpg
