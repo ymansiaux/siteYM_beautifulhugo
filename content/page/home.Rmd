@@ -20,3 +20,5 @@ Ce site est aussi un bon prétexte pour m'entrainer à utiliser le package R _bl
 N'hésitez pas à me contacter si besoin !
 
 Bonne visite
+
+<div> </div>
