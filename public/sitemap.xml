@@ -3,33 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/post/tools-dicopub/</loc>
-    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
+    <loc>/tags/applications/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/donn%C3%A9es/</loc>
-    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/outils/</loc>
-    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
+    <loc>/post/apps-elections-municipales-2020/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/</loc>
-    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/societe/</loc>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2022-01-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/articles/</loc>
-    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/posts-congestion/</loc>
-    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/mobilit%C3%A9s/</loc>
-    <lastmod>2022-01-13T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/code/</loc>
+    <lastmod>2022-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/outils/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/package-r/</loc>
@@ -44,14 +38,8 @@
     <loc>/post/apps-applications-parkings/</loc>
     <lastmod>2021-10-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/applications/</loc>
+    <loc>/tags/mobilit%C3%A9s/</loc>
     <lastmod>2021-10-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/apps-elections-municipales-2020/</loc>
-    <lastmod>2021-10-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/societe/</loc>
-    <lastmod>2021-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/tools-shinyym/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
@@ -71,8 +59,6 @@
     <loc>/blog/</loc>
   </url><url>
     <loc>/page/about/</loc>
-  </url><url>
-    <loc>/page/home/</loc>
   </url><url>
     <loc>/page/</loc>
   </url>

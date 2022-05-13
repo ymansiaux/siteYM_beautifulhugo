@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>societe on Datalab Bordeaux Métropole</title>
+    <title>societe on Bienvenue !</title>
     <link>/tags/societe/</link>
-    <description>Recent content in societe on Datalab Bordeaux Métropole</description>
+    <description>Recent content in societe on Bienvenue !</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
     <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
-    <lastBuildDate>Mon, 25 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/societe/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/societe/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Elections municipales 2020</title>
+      <title>Historique des élections</title>
       <link>/post/apps-elections-municipales-2020/</link>
-      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
       <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
       <guid>/post/apps-elections-municipales-2020/</guid>
-      <description>  L’application de consultation des résultats est consultable ici :
- Accéder à l’application </description>
+      <description>Cette application Shiny propose d’observer les résultats électoraux depuis 1992 par bureaux de vote sur le territoire Métropolitain.
+A date, seules les données de Bordeaux sont disponibles, les données d’autres communes devraient être observables prochainement.
+Le jeu de données source est présent sur le site Open Data de Bordeaux Métropole.
+Cette application a été intéressante à réaliser pour plusieurs raisons :
+La manipulation de données alphanumériques, mais également de données géographiques, en utilisant les infos de localisation des bureaux de vote et des lieux de vote (de Bordeaux pour le moment).</description>
     </item>
     
   </channel>
