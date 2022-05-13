@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Datalab Bordeaux Métropole</title>
+    <title>Bienvenue !</title>
     <link>/</link>
-    <description>Recent content on Datalab Bordeaux Métropole</description>
+    <description>Recent content on Bienvenue !</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
     <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
-    <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Dicopub</title>
-      <link>/post/tools-dicopub/</link>
-      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <title>Historique des élections</title>
+      <link>/post/apps-elections-municipales-2020/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
       <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
-      <guid>/post/tools-dicopub/</guid>
-      <description>Le dictionnaire public des données de Bordeaux Métropole est disponible ici.</description>
-    </item>
-    
-    <item>
-      <title>Congestion Bordeaux Métropole</title>
-      <link>/post/posts-congestion/</link>
-      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
-      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
-      <guid>/post/posts-congestion/</guid>
-      <description>Cette application propose d’analyser les données de congestion fournies par le traficolor.</description>
+      <guid>/post/apps-elections-municipales-2020/</guid>
+      <description>Cette application Shiny propose d’observer les résultats électoraux depuis 1992 par bureaux de vote sur le territoire Métropolitain.
+A date, seules les données de Bordeaux sont disponibles, les données d’autres communes devraient être observables prochainement.
+Le jeu de données source est présent sur le site Open Data de Bordeaux Métropole.
+Cette application a été intéressante à réaliser pour plusieurs raisons :
+La manipulation de données alphanumériques, mais également de données géographiques, en utilisant les infos de localisation des bureaux de vote et des lieux de vote (de Bordeaux pour le moment).</description>
     </item>
     
     <item>
@@ -32,7 +27,11 @@
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
       <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
       <guid>/post/tools-xtradata/</guid>
-      <description>Notre package R pour télécharger les données est disponible sur le portail open data de Bordeaux Métropole :</description>
+      <description>Ce package R propose d’appeler les webservices Bordeaux Métropole features et aggregate.
+Le webservice features propose de renvoie les données d’une couche de données, en temps réel ou dans le passé, tandis que le webservice aggregate propose des calculs statistiques sur les données historisées.
+Ce package est disponible en téléchargement sur le portail open data de Bordeaux Métropole.
+Les sources sont disponibles ici.
+Ce package est un de mes outils indispensables dans mon quotidien.</description>
     </item>
     
     <item>
@@ -44,17 +43,7 @@
       <description>Cette application propose d’analyser les données d’occupation des parkings hors voirie de Bordeaux Métropole.
 Ces données sont présentes sur le portail open data de Bordeaux Métropole.
 Cet outil permet d’étudier :
- les taux d’occupation des parkings sur 1 période d’intérêt (1 journée, 1 semaine, 1 mois ou 1 année), pour 4 grands secteurs (l’hypercentre de Bordeaux, le centre de Bordeaux, la périphérie de Bordeaux et les parcs relais).</description>
-    </item>
-    
-    <item>
-      <title>Elections municipales 2020</title>
-      <link>/post/apps-elections-municipales-2020/</link>
-      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
-      <guid>/post/apps-elections-municipales-2020/</guid>
-      <description>  L’application de consultation des résultats est consultable ici :
- Accéder à l’application </description>
+les taux d’occupation des parkings sur 1 période d’intérêt (1 journée, 1 semaine, 1 mois ou 1 année), pour 4 grands secteurs (l’hypercentre de Bordeaux, le centre de Bordeaux, la périphérie de Bordeaux et les parcs relais).</description>
     </item>
     
     <item>
@@ -65,7 +54,7 @@ Cet outil permet d’étudier :
       <guid>/post/tools-shinyym/</guid>
       <description>Ce package propose l’ajout d’extensions pour le package de développement Web shiny.
 Ce package permet notamment l’utilisation d’un certain nombre de notifications proposées dans la librairie Javascript notie.
-Le package R est librement téléchargeable sur ma page github.</description>
+L’application de consultation des résultats des élections propose l’utilisation de ce package, pour l’utilisation de la librairie notie mais également pour l’affichage d’un écran de chargement avec le logo du datalab Bordeaux Métropole. N’hésitez pas à consulter cette appli, ainsi que son code source pour voir comment utiliser ces fonctions.</description>
     </item>
     
     <item>
@@ -88,7 +77,7 @@ Le package R est librement téléchargeable sur ma page github.</description>
       <guid>/post/tools-bdxmetroidentity/</guid>
       <description>Le package bdxmetroidentity a été développé par ThinkR.
 Il fournit des outils de design dédiés aux productions data du datalab de Bordeaux Métropole. Il inclut :
- Des fonctionnalités pour associer un thème light/dark à des graphiques {ggplot2}, Des fonctionnalités pour associer un thème light/dark à des rapports et des vignettes R Markdown, Des fonctionnalités pour associer un thème light/dark à des apps Shiny.  Le site du package est disponible ici : http://bdxmetropole.</description>
+Des fonctionnalités pour associer un thème light/dark à des graphiques {ggplot2},Des fonctionnalités pour associer un thème light/dark à des rapports et des vignettes R Markdown,Des fonctionnalités pour associer un thème light/dark à des apps Shiny.Le package est disponible ici.</description>
     </item>
     
     <item>
@@ -97,18 +86,10 @@ Il fournit des outils de design dédiés aux productions data du datalab de Bord
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
       <guid>/page/about/</guid>
-      <description>Blablabla</description>
-    </item>
-    
-    <item>
-      <title>Bienvenue</title>
-      <link>/page/home/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
-      <guid>/page/home/</guid>
-      <description>Le datalab est une plateforme d’analyse et de valorisation des données, à destination des métiers, des agents de Bordeaux Métropole et des agents des communes mutualisées.
-Notre activité s’oriente autour de 3 grandes axes :
- La publication d’applications / tableaux de bords interactifs La réalisation articles d’analyses de données, qu’elles proviennent d’open data, de données métiers ou de sources externes La fourniture d’outils et services en utilisation libre pour comprendre / exploiter / visualiser les données  Pour suivre notre travail cliquez ci-dessous !</description>
+      <description>Actuellement data scientist à Bordeaux Métropole, j&amp;rsquo;ai auparavant longtemps travaillé dans l&amp;rsquo;application de modèles statistiques à des questions d&amp;rsquo;épidémiologie.
+Si vous aimez la lecture barbante (même si il y a de jolies images), mon manuscrit de thèse est librement consultable ici.
+J&amp;rsquo;utilise aujourd&amp;rsquo;hui moins mes compétences en statistique, mais vise plutôt à m&amp;rsquo;améliorer sur la restitution de résultats à l&amp;rsquo;attention de publics plus novices sur l&amp;rsquo;analyse de données.
+Mes outils principaux sont le langage R, et les packages {shiny} et {ggplot2}.</description>
     </item>
     
   </channel>
