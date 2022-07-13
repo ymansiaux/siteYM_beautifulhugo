@@ -1,0 +1,94 @@
+---
+title: Nettoyage résultats électoraux
+subtitle: Passage des données data.gouv.fr en mode 'tidy'
+author: Yohann Mansiaux
+date: '2022-05-13'
+slug: script-clean-elections
+tags: ["R", "citoyennete", "code"]
+published: true
+---
+
+Ce script propose de nettoyer les données de résultats des élections présidentielles 2022, restituées au niveau du bureau de vote sur data.gouv.fr.
+
+https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/
+
+On propose ici un nettoyage du dataset _resultats-par-niveau-burvot-t1-france-entiere.txt_.
+
+```{r message=FALSE}
+# Chargement des libraires
+library(data.table)
+library(janitor)
+library(snakecase)
+```
+
+
+```{r}
+import <- fread("https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224", encoding = "Latin-1")
+
+head(import)
+```
+
+On peut voir que le format du jeu de données est peu satisfaisant pour être analysé avec l'ensemble des résultats sur un bureau de vote donné qui sont distribués sur 1 ligne avec un grand nombre de colonnes et des noms de colonnes peu clairs.
+
+
+```{r}
+importDT <- import %>% 
+  clean_names() %>% 
+  setDT() %>% 
+  remove_empty(which = "cols") 
+```
+
+
+On remplace ici les noms de colonnes en "v" par les prefixes correspondant tout en continuant la numérotation séquentielle à chaque nouveau candidat.
+
+```{r}
+prefixes <- c("n_panneau_", "sexe_", "nom_", "prenom_", "voix_", "percent_voix_ins_", "percent_voix_exp_") 
+
+colnamesToReplace <- colnames(importDT)[grepl(pattern = "^v\\d", colnames(importDT))]
+if(length(colnamesToReplace)>1){
+  nCandidats <- length(colnamesToReplace) / length(prefixes) + 1 
+  newColnames <- paste0(prefixes, sort(rep(2:nCandidats, length(prefixes))))
+  setnames(importDT, old = colnamesToReplace, new = newColnames, skip_absent = TRUE)
+}
+
+```
+
+
+Les résultats sont encodés en character, on substitue les "," par des "." et on transforme en numérique.
+
+```{r}
+cols_to_transform <- colnames(importDT)[grepl(pattern = "voix", colnames(importDT))]
+cleaned_dt <- copy(importDT) %>% 
+  .[, (cols_to_transform) := lapply(.SD, function(.x) as.numeric(gsub(pattern = ",", replacement = ".", x = .x))), .SDcols = cols_to_transform]
+
+```
+
+On fait l'équivalent d'un pivot_longer avec data.table pour obtenir 1 ligne / bureau de vote / candidat.
+
+
+```{r}
+resultatsVotes <- melt(cleaned_dt, id=c("code_de_la_commune", "code_du_b_vote"), 
+                       measure=patterns("^voix", "^nom"), value.factor=FALSE, value.name = c("voix","nom")) %>% 
+  .[, voix := sum(voix, na.rm = TRUE), by = c("code_de_la_commune", "code_du_b_vote", "nom")] %>%
+  .[, variable := NULL]
+
+head(resultatsVotes)
+
+```
+
+On calcule des indicateurs globaux de participation pour chaque bureau de vote.
+
+```{r}
+statsBureaux <- cleaned_dt[, c("code_de_la_commune", "code_du_b_vote", "inscrits", "abstentions", "votants", "blancs", "nuls", "exprimes")] %>% 
+  unique()
+
+head(statsBureaux)
+
+```
+
+Ce script est facilement modifiable si vous trouvez qu'il manque des infos dans les datasets finaux.
+
+Pour l'utiliser avec les résultats du deuxième tour, l'url du jeu de données brut est la suivante : 
+https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086.
+
+

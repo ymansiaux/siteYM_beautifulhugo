@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Bienvenue !</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Bienvenue !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Historique des élections</title>
+      <link>/post/apps-elections-municipales-2020/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/apps-elections-municipales-2020/</guid>
+      <description>Cette application Shiny propose d’observer les résultats électoraux depuis 1992 par bureaux de vote sur le territoire Métropolitain.
+A date, seules les données de Bordeaux sont disponibles, les données d’autres communes devraient être observables prochainement.
+Le jeu de données source est présent sur le site Open Data de Bordeaux Métropole.
+Cette application a été intéressante à réaliser pour plusieurs raisons :
+La manipulation de données alphanumériques, mais également de données géographiques, en utilisant les infos de localisation des bureaux de vote et des lieux de vote (de Bordeaux pour le moment).</description>
+    </item>
+    
+    <item>
+      <title>Package R xtradata</title>
+      <link>/post/tools-xtradata/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/tools-xtradata/</guid>
+      <description>Ce package R propose d’appeler les webservices Bordeaux Métropole features et aggregate.
+Le webservice features propose de renvoie les données d’une couche de données, en temps réel ou dans le passé, tandis que le webservice aggregate propose des calculs statistiques sur les données historisées.
+Ce package est disponible en téléchargement sur le portail open data de Bordeaux Métropole.
+Les sources sont disponibles ici.
+Ce package est un de mes outils indispensables dans mon quotidien.</description>
+    </item>
+    
+    <item>
+      <title>Application parkings</title>
+      <link>/post/apps-applications-parkings/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/apps-applications-parkings/</guid>
+      <description>Cette application propose d’analyser les données d’occupation des parkings hors voirie de Bordeaux Métropole.
+Ces données sont présentes sur le portail open data de Bordeaux Métropole.
+Cet outil permet d’étudier :
+les taux d’occupation des parkings sur 1 période d’intérêt (1 journée, 1 semaine, 1 mois ou 1 année), pour 4 grands secteurs (l’hypercentre de Bordeaux, le centre de Bordeaux, la périphérie de Bordeaux et les parcs relais).</description>
+    </item>
+    
+    <item>
+      <title>Package R shinyYM</title>
+      <link>/post/tools-shinyym/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/tools-shinyym/</guid>
+      <description>Ce package propose l’ajout d’extensions pour le package de développement Web shiny.
+Ce package permet notamment l’utilisation d’un certain nombre de notifications proposées dans la librairie Javascript notie.
+L’application de consultation des résultats des élections propose l’utilisation de ce package, pour l’utilisation de la librairie notie mais également pour l’affichage d’un écran de chargement avec le logo du datalab Bordeaux Métropole. N’hésitez pas à consulter cette appli, ainsi que son code source pour voir comment utiliser ces fonctions.</description>
+    </item>
+    
+    <item>
+      <title>Package R leaflettools</title>
+      <link>/post/tools-leafletools/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/tools-leafletools/</guid>
+      <description>Ce package propose l’ajout d’extensions pour le package de cartographie leaflet.
+En l’état, une seule extension est implémentée. La fonction addBezierCurve permet d’ajouter des courbes incurvées entre 2 points.
+Le code est largement inspiré d’un code JavaScript.
+Le package R est librement téléchargeable sur ma page github.</description>
+    </item>
+    
+    <item>
+      <title>Package R bdxmetroidentity</title>
+      <link>/post/tools-bdxmetroidentity/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/tools-bdxmetroidentity/</guid>
+      <description>Le package bdxmetroidentity a été développé par ThinkR.
+Il fournit des outils de design dédiés aux productions data du datalab de Bordeaux Métropole. Il inclut :
+Des fonctionnalités pour associer un thème light/dark à des graphiques {ggplot2},Des fonctionnalités pour associer un thème light/dark à des rapports et des vignettes R Markdown,Des fonctionnalités pour associer un thème light/dark à des apps Shiny.Le package est disponible ici.</description>
+    </item>
+    
+  </channel>
+</rss>

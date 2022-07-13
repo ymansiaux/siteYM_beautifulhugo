@@ -1,0 +1,29 @@
+---
+title: Application isochrones
+subtitle: Calcul d'isochrones et observations des équipements publics à proximité
+author: Yohann Mansiaux
+date: '2022-06-24'
+slug: apps-applications-isochrones
+tags: ["Applications", "Mobilités"]
+published: true
+---
+
+Cette application propose d'utiiser le webservice de géocodage de Bordeaux Métropole, de calculer des isochrones autour de cette adresse géolocalisée (zone présente à x minutes à pied / à vélo / en voiture), et d'afficher les équipements publics présents dans la zone calculée.
+
+
+Cette application a été intéressante à réaliser pour plusieurs raisons :
+
+* L'utilisation du package R _{xml2}_ pour parser les résultats du webservice de géocodage de Bordeaux Métropole
+
+* L'utilisation du package R _{osrm}_ pour le calcul des isochrones
+
+* La manipulation de données géographiques pour calculer les <a href="https://data.bordeaux-metropole.fr/dicopub/#/dico#TO_EQPUB_P
+" target="_blank" rel="noopener noreferrer" class="button">équipements publics</a> présents dans l'isochrone calculé 
+
+* L'utilisation combiné des grids CSS et des flexbox pour le design de l'application.
+
+Cette application est consultable <a href="https://ymansiaux.shinyapps.io/isochrones/" target="_blank" rel="noopener noreferrer" class="button">ici</a>.
+
+Le code source est présent <a href="https://github.com/ymansiaux/isochrones" target="_blank" rel="noopener noreferrer" class="button">ici</a>.
+
+

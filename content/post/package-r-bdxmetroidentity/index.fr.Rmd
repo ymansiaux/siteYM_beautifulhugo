@@ -1,0 +1,20 @@
+---
+title: Package R bdxmetroidentity
+subtitle: Charte graphique BM pour les outils de design
+author: Yohann Mansiaux
+date: '2021-05-01'
+slug: tools-bdxmetroidentity
+categories: ["Outils"]
+tags: ["Outils", "Package R", "Code"]
+published: true
+---
+
+Le package bdxmetroidentity a été développé par [ThinkR](https://thinkr.fr/).
+
+Il fournit des outils de design dédiés aux productions data du datalab de Bordeaux Métropole. Il inclut :
+
+* Des fonctionnalités pour associer un thème light/dark à des graphiques {ggplot2},
+* Des fonctionnalités pour associer un thème light/dark à des rapports et des vignettes R Markdown,
+* Des fonctionnalités pour associer un thème light/dark à des apps Shiny.
+
+Le package est disponible [ici](https://github.com/ymansiaux/bdxmetroidentity). Une fois installé il est possible de consulter la documentation en utilisant la commande `bdxmetroidentity::open_pkgdown()`

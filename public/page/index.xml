@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Bienvenue !</title>
+    <link>/page/</link>
+    <description>Recent content in Pages on Bienvenue !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster><atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A propos</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/page/about/</guid>
+      <description>Actuellement data scientist à Bordeaux Métropole, j&amp;rsquo;ai auparavant longtemps travaillé dans l&amp;rsquo;application de modèles statistiques à des questions d&amp;rsquo;épidémiologie.
+Si vous aimez la lecture barbante (même si il y a de jolies images), mon manuscrit de thèse est librement consultable ici.
+J&amp;rsquo;utilise aujourd&amp;rsquo;hui moins mes compétences en statistique, mais vise plutôt à m&amp;rsquo;améliorer sur la restitution de résultats à l&amp;rsquo;attention de publics plus novices sur l&amp;rsquo;analyse de données.
+Mes outils principaux sont le langage R, et les packages {shiny} et {ggplot2}.</description>
+    </item>
+    
+  </channel>
+</rss>

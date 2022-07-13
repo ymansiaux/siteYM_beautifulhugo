@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webservices on Bienvenue !</title>
+    <link>/tags/webservices/</link>
+    <description>Recent content in webservices on Bienvenue !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/webservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Package R xtradata</title>
+      <link>/post/tools-xtradata/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/tools-xtradata/</guid>
+      <description>Ce package R propose d’appeler les webservices Bordeaux Métropole features et aggregate.
+Le webservice features propose de renvoie les données d’une couche de données, en temps réel ou dans le passé, tandis que le webservice aggregate propose des calculs statistiques sur les données historisées.
+Ce package est disponible en téléchargement sur le portail open data de Bordeaux Métropole.
+Les sources sont disponibles ici.
+Ce package est un de mes outils indispensables dans mon quotidien.</description>
+    </item>
+    
+  </channel>
+</rss>
