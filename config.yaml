@@ -20,7 +20,7 @@ Params:
     - post
     - posts
   readingTime: yes
-  rss: yes
+  rss: no
   showRelatedPosts: yes
   socialShare: false
   subtitle: Qui suis-je ?
@@ -28,8 +28,8 @@ Params:
   wordCount: yes
 Author:
   email: y.mansiaux@bordeaux-metropole.fr
-  github: github.com/ymansiaux
-  gitlab: https://gitlab.com/bordeaux-metropole-public
+  github: ymansiaux
+  gitlab: bordeaux-metropole-public
   name: Yohann Mansiaux
 menu:
   main:

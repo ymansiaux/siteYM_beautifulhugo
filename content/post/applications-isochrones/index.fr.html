@@ -1,12 +1,11 @@
 ---
 title: Application isochrones
-subtitle: Calcul d'isochrones
+subtitle: Calcul d'isochrones et observations des équipements publics à proximité
 author: Yohann Mansiaux
 date: '2022-06-24'
 slug: apps-applications-isochrones
 tags: ["Applications", "Mobilités"]
 published: true
-resume_court: pkg
 ---
 
 <script src="{{< blogdown/postref >}}index.fr_files/header-attrs/header-attrs.js"></script>
@@ -15,11 +14,11 @@ resume_court: pkg
 <p>Cette application propose d’utiiser le webservice de géocodage de Bordeaux Métropole, de calculer des isochrones autour de cette adresse géolocalisée (zone présente à x minutes à pied / à vélo / en voiture), et d’afficher les équipements publics présents dans la zone calculée.</p>
 <p>Cette application a été intéressante à réaliser pour plusieurs raisons :</p>
 <ul>
-<li><p>L’utilisation du package R <em>xml2</em> pour parser les résultats du webservice de géocodage de Bordeaux Métropole</p></li>
-<li><p>L’utilisation du package R <em>osrm</em> pour le calcul des isochrones</p></li>
+<li><p>L’utilisation du package R <em>{xml2}</em> pour parser les résultats du webservice de géocodage de Bordeaux Métropole</p></li>
+<li><p>L’utilisation du package R <em>{osrm}</em> pour le calcul des isochrones</p></li>
 <li><p>La manipulation de données géographiques pour calculer les <a href="https://data.bordeaux-metropole.fr/dicopub/#/dico#TO_EQPUB_P
 " target="_blank" rel="noopener noreferrer" class="button">équipements publics</a> présents dans l’isochrone calculé</p></li>
 <li><p>L’utilisation combiné des grids CSS et des flexbox pour le design de l’application.</p></li>
 </ul>
-<p>Cette application est consultable <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_bureauvote_s/information/" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
+<p>Cette application est consultable <a href="https://ymansiaux.shinyapps.io/isochrones/" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
 <p>Le code source est présent <a href="https://github.com/ymansiaux/isochrones" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>

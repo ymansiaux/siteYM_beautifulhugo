@@ -18,13 +18,13 @@ Cette application a été intéressante à réaliser pour plusieurs raisons :
 
 * La manipulation de données alphanumériques, mais également de données géographiques, en utilisant les infos de localisation des <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_bureauvote_s/information/" target="_blank" rel="noopener noreferrer" class="button">bureaux de vote</a> et des <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_lieuvote_p/information/" target="_blank" rel="noopener noreferrer" class="button">lieux de vote</a> (de Bordeaux pour le moment).
 
-* L'utilisation de la programmation objet R6. Chaque élection est un objet R6 avec ses caractéristiques (la commune, le type d'élection, les candidats, les résultats ....). Ces objets R6 se baladent de modules en modules dans mon application. Ceci permet d'avoir un code plus léger, d'éviter des répétitions et rend le tout très robuste.
+* L'utilisation de la programmation objet avec le package _{R6}_. Chaque élection est un objet R6 avec ses caractéristiques (la commune, le type d'élection, les candidats, les résultats ....). Ces objets R6 se baladent de modules en modules dans mon application. Ceci permet d'avoir un code plus léger, d'éviter des répétitions et rend le tout très robuste.
 
 * L'utilisation de fonctions de personnalisation "avancées" de Shiny. J'ai pour la première fois incorporé du CSS, des éléments HTML (par exemple le footer de l'application), du JQuery, et ai joué avec le package _{bslib}_ pour avoir un contrôle sur les variables Bootstrap.
 
 Le défaut de cette application est qu'elle a pas mal de dépendances, le contrôle des effets de bord liés à des changements de version est effectué par l'utilisation du package R _{renv}_.
 
-Cette application est consultable <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_bureauvote_s/information/" target="_blank" rel="noopener noreferrer" class="button">ici</a>.
+Cette application est consultable <a href="https://ymansiaux.shinyapps.io/elections/" target="_blank" rel="noopener noreferrer" class="button">ici</a>.
 
 
 Le code source est présent <a href="https://github.com/ymansiaux/elections" target="_blank" rel="noopener noreferrer" class="button">ici</a>.

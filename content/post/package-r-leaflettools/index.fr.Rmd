@@ -4,7 +4,7 @@ subtitle: Extensions pour leaflet
 author: Yohann Mansiaux
 date: '2021-06-01'
 slug: tools-leafletools
-tags: ["Outils", "package R", "code"]
+tags: ["Outils", "Package R", "Code"]
 published: true
 ---
 

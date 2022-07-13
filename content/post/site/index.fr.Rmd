@@ -1,0 +1,17 @@
+---
+title: Site web perso
+subtitle: Code source du site
+author: Yohann Mansiaux
+date: '2022-07-01'
+slug: tools-xtradata
+tags: ["Outils", "Code", "Communication"]
+published: true
+---
+
+Ce site a été construit en utilisant l'outil de développement de blog Hugo, via le package _{blogdown}_.
+
+Je me suis très largement inspiré du template beautifulhugo fourni [ici](https://github.com/ymansiaux/siteYM_beautifulhugo/settings/branches).
+
+Le site est hébergé sur Netlify, la procédure de déploiement est décrite [dans la documentation de bookdown](https://bookdown.org/yihui/blogdown/netlify.html).
+
+Les sources sont disponibles [sur mon github](https://github.com/ymansiaux/siteYM_beautifulhugo).

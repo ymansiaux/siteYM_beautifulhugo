@@ -21,8 +21,8 @@ Cet outil permet d'étudier :
 
 Cette application m'a permis d'expérimenter pour la première fois l'utilisation du package _{R6}_ pour créer des objets "Parkings" avec leur caractéristiques propres (identifiant, données associées ...).
 
-J'ai également testé l'utilisation du package _memoise}_ pour mettre en cache des résultats d'appels à des fonctions. En effet dans cet outil l'utilisateur peut potentiellement réaliser plusieurs la même requête (date identique sur un jeu de parkings identiques). Il était intéressant de mettre en cache des résultats de requêtes déjà réalisées afin de renvoyer les résultats plus rapidement !
+J'ai également testé l'utilisation du package _{memoise}_ pour mettre en cache des résultats d'appels à des fonctions. En effet dans cet outil l'utilisateur peut potentiellement réaliser plusieurs la même requête (date identique sur un jeu de parkings identiques). Il était intéressant de mettre en cache des résultats de requêtes déjà réalisées afin de renvoyer les résultats plus rapidement !
 
 Le code source est présent <a href="https://github.com/ymansiaux/occupationparkingsapp" target="_blank" rel="noopener noreferrer" class="button">ici</a>.
 
-<p><a href="https://rstudio-connect.bordeaux-it.fr/occupationparkingsapp/" target="_blank" rel="noopener noreferrer" class="button">Accéder à l'application</a></p>
+<p><a href="https://ymansiaux.shinyapps.io/occupationparkingspp/" target="_blank" rel="noopener noreferrer" class="button">Accéder à l'application</a></p>
