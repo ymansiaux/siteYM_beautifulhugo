@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
     <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
-    <lastBuildDate>Sat, 01 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/outils/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/outils/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Site web perso</title>
+      <link>/post/site/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/site/</guid>
+      <description>Ce site a été construit en utilisant l’outil de développement de blog Hugo, via le package {blogdown}.
+Je me suis très largement inspiré du template beautifulhugo fourni ici.
+Le site est hébergé sur Netlify, la procédure de déploiement est décrite dans la documentation de bookdown.
+Les sources sont disponibles sur mon github.</description>
+    </item>
+    
     <item>
       <title>Package R xtradata</title>
       <link>/post/tools-xtradata/</link>

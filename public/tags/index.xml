@@ -7,40 +7,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
     <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
-    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Applications</title>
-      <link>/tags/applications/</link>
-      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
-      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
-      <guid>/tags/applications/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>societe</title>
-      <link>/tags/societe/</link>
-      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
-      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
-      <guid>/tags/societe/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>code</title>
       <link>/tags/code/</link>
-      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
       <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
       <guid>/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Communication</title>
+      <link>/tags/communication/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/tags/communication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Outils</title>
       <link>/tags/outils/</link>
-      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
       <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
       <guid>/tags/outils/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Applications</title>
+      <link>/tags/applications/</link>
+      <pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/tags/applications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobilités</title>
+      <link>/tags/mobilit%C3%A9s/</link>
+      <pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/tags/mobilit%C3%A9s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>citoyennete</title>
+      <link>/tags/citoyennete/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/tags/citoyennete/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
@@ -59,15 +86,6 @@
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
       <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
       <guid>/tags/webservices/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobilités</title>
-      <link>/tags/mobilit%C3%A9s/</link>
-      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
-      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
-      <guid>/tags/mobilit%C3%A9s/</guid>
       <description></description>
     </item>
     

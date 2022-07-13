@@ -7,7 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
     <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
-    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Site web perso</title>
+      <link>/post/site/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/site/</guid>
+      <description>Ce site a été construit en utilisant l’outil de développement de blog Hugo, via le package {blogdown}.
+Je me suis très largement inspiré du template beautifulhugo fourni ici.
+Le site est hébergé sur Netlify, la procédure de déploiement est décrite dans la documentation de bookdown.
+Les sources sont disponibles sur mon github.</description>
+    </item>
+    
+    <item>
+      <title>Application isochrones</title>
+      <link>/post/apps-applications-isochrones/</link>
+      <pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/apps-applications-isochrones/</guid>
+      <description>Cette application propose d’utiiser le webservice de géocodage de Bordeaux Métropole, de calculer des isochrones autour de cette adresse géolocalisée (zone présente à x minutes à pied / à vélo / en voiture), et d’afficher les équipements publics présents dans la zone calculée.
+Cette application a été intéressante à réaliser pour plusieurs raisons :
+L’utilisation du package R {xml2} pour parser les résultats du webservice de géocodage de Bordeaux Métropole</description>
+    </item>
+    
+    <item>
+      <title>Nettoyage résultats électoraux</title>
+      <link>/post/script-clean-elections/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/script-clean-elections/</guid>
+      <description>Ce script propose de nettoyer les données de résultats des élections présidentielles 2022, restituées au niveau du bureau de vote sur data.gouv.fr.
+https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/
+On propose ici un nettoyage du dataset resultats-par-niveau-burvot-t1-france-entiere.txt.
+# Chargement des libraireslibrary(data.table)library(janitor)library(snakecase)import &amp;lt;- fread(&amp;quot;https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224&amp;quot;, encoding = &amp;quot;Latin-1&amp;quot;)## Warning in fread(&amp;quot;https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-## bbda-322d80868224&amp;quot;, : Detected 28 column names but the data has 105 columns## (i.e. invalid file). Added 77 extra default column names at the end.</description>
+    </item>
+    
     <item>
       <title>Historique des élections</title>
       <link>/post/apps-elections-municipales-2020/</link>

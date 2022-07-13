@@ -59,11 +59,11 @@
   "headline": "Historique des élections",
   "description" : "Cette application Shiny propose d’observer les résultats électoraux depuis 1992 par bureaux de vote sur le territoire Métropolitain.\nA date, seules les données de Bordeaux sont disponibles, les données d’autres communes devraient être observables prochainement.\nLe jeu de données source est présent sur le site Open Data de Bordeaux Métropole.\nCette application a été intéressante à réaliser pour plusieurs raisons :\n\rLa manipulation de données alphanumériques, mais également de données géographiques, en utilisant les infos de localisation des bureaux de vote et des lieux de vote (de Bordeaux pour le moment).",
   "inLanguage" : "fr",
-  "wordCount":  229 ,
+  "wordCount":  232 ,
   "datePublished" : "2022-04-13T00:00:00",
   "dateModified" : "2022-04-13T00:00:00",
   "image" : "\/img\/YM.jpg",
-  "keywords" : [ "Applications, societe" ],
+  "keywords" : [ "Applications, citoyennete" ],
   "mainEntityOfPage" : "\/post\/apps-elections-municipales-2020\/",
   "publisher" : {
     "@type": "Organization",
@@ -249,7 +249,7 @@
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;229&nbsp;mots
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;232&nbsp;mots
   
   
     
@@ -284,11 +284,11 @@
 <p>Cette application a été intéressante à réaliser pour plusieurs raisons :</p>
 <ul>
 <li><p>La manipulation de données alphanumériques, mais également de données géographiques, en utilisant les infos de localisation des <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_bureauvote_s/information/" target="_blank" rel="noopener noreferrer" class="button">bureaux de vote</a> et des <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_lieuvote_p/information/" target="_blank" rel="noopener noreferrer" class="button">lieux de vote</a> (de Bordeaux pour le moment).</p></li>
-<li><p>L’utilisation de la programmation objet R6. Chaque élection est un objet R6 avec ses caractéristiques (la commune, le type d’élection, les candidats, les résultats ….). Ces objets R6 se baladent de modules en modules dans mon application. Ceci permet d’avoir un code plus léger, d’éviter des répétitions et rend le tout très robuste.</p></li>
+<li><p>L’utilisation de la programmation objet avec le package <em>{R6}</em>. Chaque élection est un objet R6 avec ses caractéristiques (la commune, le type d’élection, les candidats, les résultats ….). Ces objets R6 se baladent de modules en modules dans mon application. Ceci permet d’avoir un code plus léger, d’éviter des répétitions et rend le tout très robuste.</p></li>
 <li><p>L’utilisation de fonctions de personnalisation “avancées” de Shiny. J’ai pour la première fois incorporé du CSS, des éléments HTML (par exemple le footer de l’application), du JQuery, et ai joué avec le package <em>{bslib}</em> pour avoir un contrôle sur les variables Bootstrap.</p></li>
 </ul>
 <p>Le défaut de cette application est qu’elle a pas mal de dépendances, le contrôle des effets de bord liés à des changements de version est effectué par l’utilisation du package R <em>{renv}</em>.</p>
-<p>Cette application est consultable <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/el_bureauvote_s/information/" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
+<p>Cette application est consultable <a href="https://ymansiaux.shinyapps.io/elections/" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
 <p>Le code source est présent <a href="https://github.com/ymansiaux/elections" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
 
 
@@ -297,7 +297,7 @@
             
               <a href="//tags/applications/">Applications</a>&nbsp;
             
-              <a href="//tags/societe/">societe</a>&nbsp;
+              <a href="//tags/citoyennete/">citoyennete</a>&nbsp;
             
           </div>
         
@@ -314,6 +314,10 @@
                   <ul>
                 
                 
+                    <li><a href="../../post/apps-applications-isochrones/">Application isochrones</a></li>
+                
+                    <li><a href="../../post/script-clean-elections/">Nettoyage résultats électoraux</a></li>
+                
                     <li><a href="../../post/apps-applications-parkings/">Application parkings</a></li>
                 
               </ul>
@@ -329,6 +333,10 @@
               <a href="../../post/tools-xtradata/" data-toggle="tooltip" data-placement="top" title="Package R xtradata">&larr; Post précédent</a>
             </li>
           
+          
+            <li class="next">
+              <a href="../../post/script-clean-elections/" data-toggle="tooltip" data-placement="top" title="Nettoyage résultats électoraux">Post suivant &rarr;</a>
+            </li>
           
         </ul>
       
@@ -359,7 +367,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://github.com/github.com/ymansiaux" title="GitHub">
+                <a href="https://github.com/ymansiaux" title="GitHub">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -367,22 +375,13 @@
                 </a>
               </li>
               <li>
-                <a href="https://gitlab.com/https://gitlab.com/bordeaux-metropole-public" title="GitLab">
+                <a href="https://gitlab.com/bordeaux-metropole-public" title="GitLab">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
-          
-          <li>
-            <a href="" title="RSS">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
           
         </ul>
         <p class="credits copyright text-muted">

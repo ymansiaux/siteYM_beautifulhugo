@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Nettoyage résultats électoraux - Bienvenue !</title>
+  <meta name="description" content="Passage des données data.gouv.fr en mode &#39;tidy&#39;">
+  <meta name="author" content="Yohann Mansiaux"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Bienvenue !",
+    
+    "url": "\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "\/post\/script-clean-elections\/",
+          "name": "Nettoyage résultats électoraux"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Yohann Mansiaux"
+  },
+  "headline": "Nettoyage résultats électoraux",
+  "description" : "Ce script propose de nettoyer les données de résultats des élections présidentielles 2022, restituées au niveau du bureau de vote sur data.gouv.fr.\nhttps:\/\/www.data.gouv.fr\/fr\/datasets\/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour\/\nOn propose ici un nettoyage du dataset resultats-par-niveau-burvot-t1-france-entiere.txt.\n# Chargement des libraires\rlibrary(data.table)\rlibrary(janitor)\rlibrary(snakecase)\rimport \u0026lt;- fread(\u0026quot;https:\/\/www.data.gouv.fr\/fr\/datasets\/r\/79b5cac4-4957-486b-bbda-322d80868224\u0026quot;, encoding = \u0026quot;Latin-1\u0026quot;)\r## Warning in fread(\u0026quot;https:\/\/www.data.gouv.fr\/fr\/datasets\/r\/79b5cac4-4957-486b-\r## bbda-322d80868224\u0026quot;, : Detected 28 column names but the data has 105 columns\r## (i.e. invalid file). Added 77 extra default column names at the end.",
+  "inLanguage" : "fr",
+  "wordCount":  1387 ,
+  "datePublished" : "2022-05-13T00:00:00",
+  "dateModified" : "2022-05-13T00:00:00",
+  "image" : "\/img\/YM.jpg",
+  "keywords" : [ "R, citoyennete, code" ],
+  "mainEntityOfPage" : "\/post\/script-clean-elections\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "\/img\/YM.jpg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Nettoyage résultats électoraux" />
+<meta property="og:description" content="Passage des données data.gouv.fr en mode &#39;tidy&#39;">
+<meta property="og:image" content="/img/YM.jpg" />
+<meta property="og:url" content="/post/script-clean-elections/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bienvenue !" />
+
+  <meta name="twitter:title" content="Nettoyage résultats électoraux" />
+  <meta name="twitter:description" content="Passage des données data.gouv.fr en mode &#39;tidy&#39;">
+  <meta name="twitter:image" content="/img/YM.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link href='../../img/LogoDataLab.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.88.1" />
+  <link rel="alternate" href="../../index.xml" type="application/rss+xml" title="Bienvenue !"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="../../css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="../../css/highlight.min.css" /><link rel="stylesheet" href="../../css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../">Bienvenue !</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Accueil" href="../../">Accueil</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tous les contenus" href="../../blog/">Tous les contenus</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="A propos" href="../../page/about/">A propos</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Mots clés" href="../../tags">Mots clés</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Bienvenue !" href="../../">
+            <img class="avatar-img" src="../../img/YM.jpg" alt="Bienvenue !" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Nettoyage résultats électoraux</h1>
+              
+              
+              
+                
+                  <h2 class="post-subheading">Passage des données data.gouv.fr en mode &#39;tidy&#39;</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posté le 13/05/2022
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1387&nbsp;mots
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Yohann Mansiaux
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+<script src="../../post/script-clean-elections/index.fr_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Ce script propose de nettoyer les données de résultats des élections présidentielles 2022, restituées au niveau du bureau de vote sur data.gouv.fr.</p>
+<p><a href="https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/" class="uri">https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/</a></p>
+<p>On propose ici un nettoyage du dataset <em>resultats-par-niveau-burvot-t1-france-entiere.txt</em>.</p>
+<pre class="r"><code># Chargement des libraires
+library(data.table)
+library(janitor)
+library(snakecase)</code></pre>
+<pre class="r"><code>import &lt;- fread(&quot;https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224&quot;, encoding = &quot;Latin-1&quot;)</code></pre>
+<pre><code>## Warning in fread(&quot;https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-
+## bbda-322d80868224&quot;, : Detected 28 column names but the data has 105 columns
+## (i.e. invalid file). Added 77 extra default column names at the end.</code></pre>
+<pre class="r"><code>head(import)</code></pre>
+<pre><code>##    Code du département Libellé du département Code de la circonscription
+## 1:                  01                    Ain                          4
+## 2:                  01                    Ain                          5
+## 3:                  01                    Ain                          5
+## 4:                  01                    Ain                          5
+## 5:                  01                    Ain                          5
+## 6:                  01                    Ain                          5
+##    Libellé de la circonscription Code de la commune   Libellé de la commune
+## 1:          4ème circonscription                  1 L&#39;Abergement-Clémenciat
+## 2:          5ème circonscription                  2   L&#39;Abergement-de-Varey
+## 3:          5ème circonscription                  4       Ambérieu-en-Bugey
+## 4:          5ème circonscription                  4       Ambérieu-en-Bugey
+## 5:          5ème circonscription                  4       Ambérieu-en-Bugey
+## 6:          5ème circonscription                  4       Ambérieu-en-Bugey
+##    Code du b.vote Inscrits Abstentions % Abs/Ins Votants % Vot/Ins Blancs
+## 1:           0001      645         108     16,74     537     83,26     16
+## 2:           0001      213          38     17,84     175     82,16      3
+## 3:           0001     1129         266     23,56     863     76,44     18
+## 4:           0002     1128         265     23,49     863     76,51     15
+## 5:           0003     1213         246     20,28     967     79,72     10
+## 6:           0004      933         224     24,01     709     75,99      8
+##    % Blancs/Ins % Blancs/Vot Nuls % Nuls/Ins % Nuls/Vot Exprimés % Exp/Ins
+## 1:         2,48         2,98    1       0,16       0,19      520     80,62
+## 2:         1,41         1,71    1       0,47       0,57      171     80,28
+## 3:         1,59         2,09    5       0,44       0,58      840     74,40
+## 4:         1,33         1,74    6       0,53       0,70      842     74,65
+## 5:         0,82         1,03    8       0,66       0,83      949     78,24
+## 6:         0,86         1,13    4       0,43       0,56      697     74,71
+##    % Exp/Vot N°Panneau Sexe     Nom   Prénom Voix % Voix/Ins % Voix/Exp V29 V30
+## 1:     96,83         1    F ARTHAUD Nathalie    3       0,47       0,58   2   M
+## 2:     97,71         1    F ARTHAUD Nathalie    2       0,94       1,17   2   M
+## 3:     97,33         1    F ARTHAUD Nathalie    4       0,35       0,48   2   M
+## 4:     97,57         1    F ARTHAUD Nathalie    6       0,53       0,71   2   M
+## 5:     98,14         1    F ARTHAUD Nathalie    8       0,66       0,84   2   M
+## 6:     98,31         1    F ARTHAUD Nathalie    4       0,43       0,57   2   M
+##        V31    V32 V33  V34  V35 V36 V37    V38      V39 V40   V41   V42 V43 V44
+## 1: ROUSSEL Fabien   6 0,93 1,15   3   M MACRON Emmanuel 150 23,26 28,85   4   M
+## 2: ROUSSEL Fabien   7 3,29 4,09   3   M MACRON Emmanuel  50 23,47 29,24   4   M
+## 3: ROUSSEL Fabien  30 2,66 3,57   3   M MACRON Emmanuel 159 14,08 18,93   4   M
+## 4: ROUSSEL Fabien  13 1,15 1,54   3   M MACRON Emmanuel 201 17,82 23,87   4   M
+## 5: ROUSSEL Fabien  18 1,48 1,90   3   M MACRON Emmanuel 229 18,88 24,13   4   M
+## 6: ROUSSEL Fabien  21 2,25 3,01   3   M MACRON Emmanuel 156 16,72 22,38   4   M
+##         V45  V46 V47  V48  V49 V50 V51    V52    V53 V54   V55   V56 V57 V58
+## 1: LASSALLE Jean  18 2,79 3,46   5   F LE PEN Marine 149 23,10 28,65   6   M
+## 2: LASSALLE Jean  10 4,69 5,85   5   F LE PEN Marine  23 10,80 13,45   6   M
+## 3: LASSALLE Jean  24 2,13 2,86   5   F LE PEN Marine 237 20,99 28,21   6   M
+## 4: LASSALLE Jean  19 1,68 2,26   5   F LE PEN Marine 210 18,62 24,94   6   M
+## 5: LASSALLE Jean  28 2,31 2,95   5   F LE PEN Marine 227 18,71 23,92   6   M
+## 6: LASSALLE Jean  16 1,71 2,30   5   F LE PEN Marine 172 18,44 24,68   6   M
+##        V59  V60 V61  V62  V63 V64 V65       V66      V67 V68   V69   V70 V71
+## 1: ZEMMOUR Éric  43 6,67 8,27   7   M MÉLENCHON Jean-Luc  66 10,23 12,69   8
+## 2: ZEMMOUR Éric  14 6,57 8,19   7   M MÉLENCHON Jean-Luc  41 19,25 23,98   8
+## 3: ZEMMOUR Éric  69 6,11 8,21   7   M MÉLENCHON Jean-Luc 216 19,13 25,71   8
+## 4: ZEMMOUR Éric  68 6,03 8,08   7   M MÉLENCHON Jean-Luc 194 17,20 23,04   8
+## 5: ZEMMOUR Éric  74 6,10 7,80   7   M MÉLENCHON Jean-Luc 227 18,71 23,92   8
+## 6: ZEMMOUR Éric  40 4,29 5,74   7   M MÉLENCHON Jean-Luc 202 21,65 28,98   8
+##    V72     V73  V74 V75  V76  V77 V78 V79   V80     V81 V82  V83  V84 V85 V86
+## 1:   F HIDALGO Anne   5 0,78 0,96   9   M JADOT Yannick  30 4,65 5,77  10   F
+## 2:   F HIDALGO Anne   3 1,41 1,75   9   M JADOT Yannick  10 4,69 5,85  10   F
+## 3:   F HIDALGO Anne  15 1,33 1,79   9   M JADOT Yannick  25 2,21 2,98  10   F
+## 4:   F HIDALGO Anne  19 1,68 2,26   9   M JADOT Yannick  46 4,08 5,46  10   F
+## 5:   F HIDALGO Anne  16 1,32 1,69   9   M JADOT Yannick  65 5,36 6,85  10   F
+## 6:   F HIDALGO Anne   8 0,86 1,15   9   M JADOT Yannick  15 1,61 2,15  10   F
+##         V87     V88 V89  V90  V91 V92 V93    V94      V95 V96  V97  V98 V99
+## 1: PÉCRESSE Valérie  26 4,03 5,00  11   M POUTOU Philippe   3 0,47 0,58  12
+## 2: PÉCRESSE Valérie   8 3,76 4,68  11   M POUTOU Philippe   3 1,41 1,75  12
+## 3: PÉCRESSE Valérie  40 3,54 4,76  11   M POUTOU Philippe   8 0,71 0,95  12
+## 4: PÉCRESSE Valérie  42 3,72 4,99  11   M POUTOU Philippe   4 0,35 0,48  12
+## 5: PÉCRESSE Valérie  35 2,89 3,69  11   M POUTOU Philippe   3 0,25 0,32  12
+## 6: PÉCRESSE Valérie  33 3,54 4,73  11   M POUTOU Philippe   4 0,43 0,57  12
+##    V100          V101    V102 V103 V104 V105
+## 1:    M DUPONT-AIGNAN Nicolas   21 3,26 4,04
+## 2:    M DUPONT-AIGNAN Nicolas    0 0,00 0,00
+## 3:    M DUPONT-AIGNAN Nicolas   13 1,15 1,55
+## 4:    M DUPONT-AIGNAN Nicolas   20 1,77 2,38
+## 5:    M DUPONT-AIGNAN Nicolas   19 1,57 2,00
+## 6:    M DUPONT-AIGNAN Nicolas   26 2,79 3,73</code></pre>
+<p>On peut voir que le format du jeu de données est peu satisfaisant pour être analysé avec l’ensemble des résultats sur un bureau de vote donné qui sont distribués sur 1 ligne avec un grand nombre de colonnes et des noms de colonnes peu clairs.</p>
+<pre class="r"><code>importDT &lt;- import %&gt;% 
+  clean_names() %&gt;% 
+  setDT() %&gt;% 
+  remove_empty(which = &quot;cols&quot;) </code></pre>
+<p>On remplace ici les noms de colonnes en “v” par les prefixes correspondant tout en continuant la numérotation séquentielle à chaque nouveau candidat.</p>
+<pre class="r"><code>prefixes &lt;- c(&quot;n_panneau_&quot;, &quot;sexe_&quot;, &quot;nom_&quot;, &quot;prenom_&quot;, &quot;voix_&quot;, &quot;percent_voix_ins_&quot;, &quot;percent_voix_exp_&quot;) 
+
+colnamesToReplace &lt;- colnames(importDT)[grepl(pattern = &quot;^v\\d&quot;, colnames(importDT))]
+if(length(colnamesToReplace)&gt;1){
+  nCandidats &lt;- length(colnamesToReplace) / length(prefixes) + 1 
+  newColnames &lt;- paste0(prefixes, sort(rep(2:nCandidats, length(prefixes))))
+  setnames(importDT, old = colnamesToReplace, new = newColnames, skip_absent = TRUE)
+}</code></pre>
+<p>Les résultats sont encodés en character, on substitue les “,” par des “.” et on transforme en numérique.</p>
+<pre class="r"><code>cols_to_transform &lt;- colnames(importDT)[grepl(pattern = &quot;voix&quot;, colnames(importDT))]
+cleaned_dt &lt;- copy(importDT) %&gt;% 
+  .[, (cols_to_transform) := lapply(.SD, function(.x) as.numeric(gsub(pattern = &quot;,&quot;, replacement = &quot;.&quot;, x = .x))), .SDcols = cols_to_transform]</code></pre>
+<p>On fait l’équivalent d’un pivot_longer avec data.table pour obtenir 1 ligne / bureau de vote / candidat.</p>
+<pre class="r"><code>resultatsVotes &lt;- melt(cleaned_dt, id=c(&quot;code_de_la_commune&quot;, &quot;code_du_b_vote&quot;), 
+                       measure=patterns(&quot;^voix&quot;, &quot;^nom&quot;), value.factor=FALSE, value.name = c(&quot;voix&quot;,&quot;nom&quot;)) %&gt;% 
+  .[, voix := sum(voix, na.rm = TRUE), by = c(&quot;code_de_la_commune&quot;, &quot;code_du_b_vote&quot;, &quot;nom&quot;)] %&gt;%
+  .[, variable := NULL]
+
+head(resultatsVotes)</code></pre>
+<pre><code>##    code_de_la_commune code_du_b_vote voix     nom
+## 1:                  1           0001  356 ARTHAUD
+## 2:                  2           0001  188 ARTHAUD
+## 3:                  4           0001  161 ARTHAUD
+## 4:                  4           0002   94 ARTHAUD
+## 5:                  4           0003   54 ARTHAUD
+## 6:                  4           0004   43 ARTHAUD</code></pre>
+<p>On calcule des indicateurs globaux de participation pour chaque bureau de vote.</p>
+<pre class="r"><code>statsBureaux &lt;- cleaned_dt[, c(&quot;code_de_la_commune&quot;, &quot;code_du_b_vote&quot;, &quot;inscrits&quot;, &quot;abstentions&quot;, &quot;votants&quot;, &quot;blancs&quot;, &quot;nuls&quot;, &quot;exprimes&quot;)] %&gt;% 
+  unique()
+
+head(statsBureaux)</code></pre>
+<pre><code>##    code_de_la_commune code_du_b_vote inscrits abstentions votants blancs nuls
+## 1:                  1           0001      645         108     537     16    1
+## 2:                  2           0001      213          38     175      3    1
+## 3:                  4           0001     1129         266     863     18    5
+## 4:                  4           0002     1128         265     863     15    6
+## 5:                  4           0003     1213         246     967     10    8
+## 6:                  4           0004      933         224     709      8    4
+##    exprimes
+## 1:      520
+## 2:      171
+## 3:      840
+## 4:      842
+## 5:      949
+## 6:      697</code></pre>
+<p>Ce script est facilement modifiable si vous trouvez qu’il manque des infos dans les datasets finaux.</p>
+<p>Pour l’utiliser avec les résultats du deuxième tour, l’url du jeu de données brut est la suivante :
+<a href="https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086" class="uri">https://www.data.gouv.fr/fr/datasets/r/4dfd05a9-094e-4043-8a19-43b6b6bbe086</a>.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="//tags/r/">R</a>&nbsp;
+            
+              <a href="//tags/citoyennete/">citoyennete</a>&nbsp;
+            
+              <a href="//tags/code/">code</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Voir également</h4>
+                  <ul>
+                
+                
+                    <li><a href="../../post/apps-elections-municipales-2020/">Historique des élections</a></li>
+                
+                    <li><a href="../../post/tools-xtradata/">Package R xtradata</a></li>
+                
+                    <li><a href="../../post/tools-shinyym/">Package R shinyYM</a></li>
+                
+                    <li><a href="../../post/tools-leafletools/">Package R leaflettools</a></li>
+                
+                    <li><a href="../../post/tools-bdxmetroidentity/">Package R bdxmetroidentity</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="../../post/apps-elections-municipales-2020/" data-toggle="tooltip" data-placement="top" title="Historique des élections">&larr; Post précédent</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="../../post/apps-applications-isochrones/" data-toggle="tooltip" data-placement="top" title="Application isochrones">Post suivant &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:y.mansiaux@bordeaux-metropole.fr" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/ymansiaux" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/bordeaux-metropole-public" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Yohann Mansiaux
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2022
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="../../">Bienvenue !</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Carbure avec <a href="https://gohugo.io">Hugo v0.88.1</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="../../js/main.js"></script>
+<script src="../../js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="../../js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
