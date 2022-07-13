@@ -3,28 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/code/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/communication/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/outils/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/site/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/apps-applications-isochrones/</loc>
+    <lastmod>2022-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/applications/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/mobilit%C3%A9s/</loc>
+    <lastmod>2022-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/citoyennete/</loc>
+    <lastmod>2022-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/script-clean-elections/</loc>
+    <lastmod>2022-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/r/</loc>
+    <lastmod>2022-05-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/apps-elections-municipales-2020/</loc>
     <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/societe/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-04-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/code/</loc>
-    <lastmod>2022-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/outils/</loc>
-    <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/package-r/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
@@ -36,9 +54,6 @@
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/apps-applications-parkings/</loc>
-    <lastmod>2021-10-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/mobilit%C3%A9s/</loc>
     <lastmod>2021-10-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/tools-shinyym/</loc>

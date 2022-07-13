@@ -3,7 +3,7 @@ title: Site web perso
 subtitle: Code source du site
 author: Yohann Mansiaux
 date: '2022-07-01'
-slug: tools-xtradata
+slug: site
 tags: ["Outils", "Code", "Communication"]
 published: true
 ---

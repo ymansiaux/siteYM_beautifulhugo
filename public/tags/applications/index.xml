@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
     <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
-    <lastBuildDate>Wed, 13 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/applications/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/applications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Application isochrones</title>
+      <link>/post/apps-applications-isochrones/</link>
+      <pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/apps-applications-isochrones/</guid>
+      <description>Cette application propose d’utiiser le webservice de géocodage de Bordeaux Métropole, de calculer des isochrones autour de cette adresse géolocalisée (zone présente à x minutes à pied / à vélo / en voiture), et d’afficher les équipements publics présents dans la zone calculée.
+Cette application a été intéressante à réaliser pour plusieurs raisons :
+L’utilisation du package R {xml2} pour parser les résultats du webservice de géocodage de Bordeaux Métropole</description>
+    </item>
+    
     <item>
       <title>Historique des élections</title>
       <link>/post/apps-elections-municipales-2020/</link>

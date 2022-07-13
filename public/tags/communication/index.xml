@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Communication on Bienvenue !</title>
+    <link>/tags/communication/</link>
+    <description>Recent content in Communication on Bienvenue !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/communication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Site web perso</title>
+      <link>/post/site/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/site/</guid>
+      <description>Ce site a été construit en utilisant l’outil de développement de blog Hugo, via le package {blogdown}.
+Je me suis très largement inspiré du template beautifulhugo fourni ici.
+Le site est hébergé sur Netlify, la procédure de déploiement est décrite dans la documentation de bookdown.
+Les sources sont disponibles sur mon github.</description>
+    </item>
+    
+  </channel>
+</rss>

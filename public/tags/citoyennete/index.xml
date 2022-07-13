@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>citoyennete on Bienvenue !</title>
+    <link>/tags/citoyennete/</link>
+    <description>Recent content in citoyennete on Bienvenue !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Fri, 13 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/citoyennete/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nettoyage résultats électoraux</title>
+      <link>/post/script-clean-elections/</link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/script-clean-elections/</guid>
+      <description>Ce script propose de nettoyer les données de résultats des élections présidentielles 2022, restituées au niveau du bureau de vote sur data.gouv.fr.
+https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/
+On propose ici un nettoyage du dataset resultats-par-niveau-burvot-t1-france-entiere.txt.
+# Chargement des libraireslibrary(data.table)library(janitor)library(snakecase)import &amp;lt;- fread(&amp;quot;https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-bbda-322d80868224&amp;quot;, encoding = &amp;quot;Latin-1&amp;quot;)## Warning in fread(&amp;quot;https://www.data.gouv.fr/fr/datasets/r/79b5cac4-4957-486b-## bbda-322d80868224&amp;quot;, : Detected 28 column names but the data has 105 columns## (i.e. invalid file). Added 77 extra default column names at the end.</description>
+    </item>
+    
+    <item>
+      <title>Historique des élections</title>
+      <link>/post/apps-elections-municipales-2020/</link>
+      <pubDate>Wed, 13 Apr 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/apps-elections-municipales-2020/</guid>
+      <description>Cette application Shiny propose d’observer les résultats électoraux depuis 1992 par bureaux de vote sur le territoire Métropolitain.
+A date, seules les données de Bordeaux sont disponibles, les données d’autres communes devraient être observables prochainement.
+Le jeu de données source est présent sur le site Open Data de Bordeaux Métropole.
+Cette application a été intéressante à réaliser pour plusieurs raisons :
+La manipulation de données alphanumériques, mais également de données géographiques, en utilisant les infos de localisation des bureaux de vote et des lieux de vote (de Bordeaux pour le moment).</description>
+    </item>
+    
+  </channel>
+</rss>
