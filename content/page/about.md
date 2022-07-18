@@ -16,4 +16,4 @@ J'ai pour objectif de continuer à m'améliorer côté dataviz et dev web, et t�
 
 Bonne lecture :)
 
-Si besoin mon CV est consultable [ici](https://drive.google.com/file/d/1JWdKh75VC9rR-_yzopHj3hAYTx17FYIk/view?usp=sharing).
+Si besoin mon CV est consultable [ici](https://drive.google.com/file/d/1JQqTmp43ySJcqzh3OZ3ifLW0Kh-CugjA/view?usp=sharing).
