@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bot on Bienvenue !</title>
+    <link>/tags/bot/</link>
+    <description>Recent content in Bot on Bienvenue !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Tue, 19 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/bot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bot twitter</title>
+      <link>/post/tools-bot-twitter/</link>
+      <pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/tools-bot-twitter/</guid>
+      <description>Mini projet “jouet” pour tester l’implémentation d’un bot twitter.
+Tous les matins, ce programme va publier l’état d’ouverture du pont Chaban Delmas à Bordeaux et les fermetures éventuelles dans la journée.
+Les données d’ouverture / fermeture prévisionnelles proviennent du portail open data de Bordeaux Métropole.
+La publication des tweets est réalisée via le package {rtweet}.
+Pour réaliser ce programme j’ai suivi le tuto super complet du créateur du bot londonmapbot.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,7 +8,7 @@ tags: ["Applications", "Mobilités"]
 published: true
 ---
 
-Cette application propose d'utiiser le webservice de géocodage de Bordeaux Métropole, de calculer des isochrones autour de cette adresse géolocalisée (zone présente à x minutes à pied / à vélo / en voiture), et d'afficher les équipements publics présents dans la zone calculée.
+Cette application propose d'utiliser le webservice de géocodage de Bordeaux Métropole, de calculer des isochrones autour de cette adresse géolocalisée (zone présente à x minutes à pied / à vélo / en voiture), et d'afficher les équipements publics présents dans la zone calculée.
 
 
 Cette application a été intéressante à réaliser pour plusieurs raisons :
