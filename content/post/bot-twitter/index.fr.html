@@ -1,0 +1,27 @@
+---
+title: Bot twitter
+subtitle: Bot twitter sur l'ouverture du pont Chaban Delmas à Bordeaux
+author: Yohann Mansiaux
+date: '2022-07-19'
+slug: tools-bot-twitter
+tags: ["Outils", "Bot"]
+published: true
+---
+
+<script src="{{< blogdown/postref >}}index.fr_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Mini projet “jouet” pour tester l’implémentation d’un bot twitter.</p>
+<p>Tous les matins, ce programme va publier l’état d’ouverture du pont Chaban Delmas à Bordeaux et les fermetures éventuelles dans la journée.</p>
+<p>Les données d’ouverture / fermeture prévisionnelles proviennent du <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/previsions_pont_chaban/information/">portail open data de Bordeaux Métropole</a>.</p>
+<p>La publication des tweets est réalisée via le package <em>{rtweet}</em>.</p>
+<p>Pour réaliser ce programme j’ai suivi le tuto super complet du créateur du bot <a href="https://github.com/matt-dray/londonmapbot">londonmapbot</a>.</p>
+<p>Pour utiliser <em>{rtweet}</em>, il est nécessaire d’avoir un compte développeur sur twitter de niveau Elevated. Tout est bien expliqué dans le tuto, et les liens vers la doc Twitter y sont présents.</p>
+<p>Les ressources suivantes m’ont également été utiles pour tout bien configurer :</p>
+<ul>
+<li><p><a href="https://docs.ropensci.org/rtweet/reference/index.html">Documentation de rtweet</a></p></li>
+<li><p><a href="https://www.r-bloggers.com/2022/01/tips-for-building-a-twitter-bot-with-r-and-github-actions/?utm_source=phpList&amp;utm_medium=email&amp;utm_campaign=R-bloggers-daily&amp;utm_content=HTML">Article de R bloggers</a></p></li>
+</ul>
+<p>Il s’agissait d’un premier test assez simple de l’utilisation de <em>{rtweet}</em>, avant d’envisager d’autres applications plus tard, peut-être plus utiles ;-)</p>
+<p>Les tweets sont publiés <a href="https://twitter.com/ymansiauxdata" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
+<p>Le code source est présent <a href="https://github.com/ymansiaux/bot_chaban" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
