@@ -1,0 +1,52 @@
+---
+title: Déploiement d'applis shiny et de plumber sur OVH
+subtitle: Comment déployer des outils sur OVH avec Docker ?
+author: Yohann Mansiaux
+date: '2022-08-11'
+slug: deploy-ovh
+tags: ["Shiny", "Plumber", "Docker"]
+published: true
+---
+
+<script src="{{< blogdown/postref >}}index.fr_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Bonjour à tous,</p>
+<p>L’idée de cet article vient de ce sujet sur le slack grrr portant sur l’utilisation de solutions autres que shinyapps pour déployer des applications shiny.</p>
+<p><img src="/img/deploy_ovh/01-slack.PNG" alt="conversation_grrr" width="75%"/></p>
+<p>Au vu de cette conversation je me suis dit que j’allais tenter de déployer sur une machine virtuelle hébergée chez OVH, une application shiny et une API plumber. Le tout étant encapsulée dans une image Docker. N’ayant utilisé Docker que très rarement auparavant c’était également l’occasion de se lancer sur cette techno !</p>
+<div id="etape-1-créer-sa-machine-virtuelle-sur-ovh" class="section level3">
+<h3>Etape 1 : créer sa machine virtuelle sur OVH</h3>
+<p>La première étape consiste à se rendre sur le site mentionné par Charles Bordet sur le fil de conversation présent ci-dessus : <a href="https://www.ovhcloud.com/fr/vps/" class="uri">https://www.ovhcloud.com/fr/vps/</a></p>
+<p>Pour se lancer et s’entrainer on choisit une machine “starter” à 3€. Ce n’est pas une bête de compétition mais c’est suffisant pour ce qu’on souhaite faire ici.</p>
+<p>Au moment de la configuration de sa machine, on pense à choisir une machine avec application, et on précise qu’on souhaite que Docker soit pré-installé.</p>
+<p><img src="/img/deploy_ovh/02-choix_machine.PNG" alt="choix_docker" width="75%"/></p>
+<p>Une fois que tout est configuré et que le paiement est fait, il faut attendre quelques minutes avant de recevoir la confirmation par mail que la machine virtuelle est utilisable.</p>
+<p>Je vous invite fortement à consulter cette <a href="https://docs.ovh.com/fr/vps/debuter-avec-vps/" target="_blank" rel="noopener noreferrer" class="button">vidéo</a> pour vous familiariser avec l’utilisation de ces outils. Il est notamment expliqué comment configurer le logiciel Putty, qui permettra, entre autres, d’utiliser Docker via l’interface en ligne de commandes, pour déployer nos outils.</p>
+<p>Pour lancer la config de Putty, je me rends d’abord sur l’interface d’OVH pour retrouver l’IP de ma machine virtuelle, et constate qu’elle répond au doux nom de vps-1d32547a.vps.ovh.net, que l’OS installé est Debian 10, et que Docker est également bien installé.</p>
+<p><img src="/img/deploy_ovh/03-ovh_IP.PNG" alt="conversation_grrr" width="75%"/></p>
+<p>Je me connecte via Putty sur la machine 51.178.45.193, une fois que c’est fait je créé 2 répertoires de travail, l’un pour mon appli Shiny (développée avec le package R <em>{golem}</em>) et l’autre pour mon API (dévelopée avec le package R <em>{plumber}</em>).</p>
+<p><img src="/img/deploy_ovh/04-putty.PNG" alt="conversation_grrr" width="75%"/></p>
+</div>
+<div id="etape-2-création-de-lapplication-shiny-et-déploiement" class="section level3">
+<h3>Etape 2 : création de l’application Shiny et déploiement</h3>
+<p>On part du principe que vous savez créer une appli via le package <em>{golem}</em>, si ce n’est pas le cas, je vous invite à vous diriger vers la <a href="https://github.com/ThinkR-open/golem" target="_blank" rel="noopener noreferrer" class="button">documentation dédiée</a>.</p>
+<p>Idem, étant un utilisateur “pas novice mais pas loin” de Docker, je ne me permettrais pas de faire un tuto spécifique dans cet article, si vous souhaitez en apprendre davantage je vous invite à consulter de la doc sur le sujet.</p>
+<p>Une fois notre appli créée (ici j’utilise une appli “coquille vide” qui ne fait absolument rien si ce n’est afficher son nom), on créé une fichier tar.gz avec les sources du package correspondant via la commande <code>devtools::build()</code>.</p>
+<p>J’utilise ensuite les fonctionnalités de <em>{golem}</em> pour créer un fichier crucial, qui est en quelque sorte la recette de cuisine de création de l’image Docker : le Dockerfile. Pour cela je me repose sur la fonction <code>golem::add_dockerfile()</code>.</p>
+<p>J’obtiens un fichier comme ceci, qui va me permettre d’avoir tous les composants essentiels pour faire tourner mon appli.</p>
+<p><img src="/img/deploy_ovh/05-dockerfile.PNG" alt="conversation_grrr" width="100%"/></p>
+<p>Pour s’assurer que tout fonctionne pour la création de mon image Docker, je dépose mon Dockerfile et le tar.gz de mon package dans le même répertoire sur ma machine virtuelle.</p>
+<p><img src="/img/deploy_ovh/06-putty2.PNG" alt="conversation_grrr" width="60%"/></p>
+<p>J’ai personnellement utilisé WinSCP pour réaliser ces opérations. On aurait pu le faire de manière plus propre en clonant le contenu d’un dépôt Github notamment. Pour faire du “vrai” déploiement d’appli, j’utiliserais cette méthode.</p>
+<p>On passe maintenant à la création de l’image Docker via la commande <code>docker build</code>, qui va lancer une à une les instructions présentes dans le Dockerfile.</p>
+<pre class="r"><code>docker build -t mydockergolem .</code></pre>
+<p><em>mydockergolem</em> correspond au nom de l’image Docker créée, il faut le retenir pour l’utiliser pour l’étape suivante : l’exécution d’une instance Docker.</p>
+<p>Pour cela on utilise <code>docker run</code>.</p>
+<pre class="r"><code>docker run -d -p 3838:3838 --rm mydockergolem</code></pre>
+<p>On peut voir qu’on a fait référence à l’image <em>mydockergolem</em>. Shiny utilise le port 3838 pour son fonctionnement, on montrera plus loin dans cet article comment gérer cette partie.</p>
+<p>Pour vérifier que notre conteneur Docker est bien actif on utilise la commande <code>docker ps</code>.</p>
+<p><img src="/img/deploy_ovh/07-docker_ps.PNG" alt="conversation_grrr" width="90%"/></p>
+<p>Il est bien présent, tout est ok, mais il va falloir être encore un peu patient pour pouvoir aller consulter notre (super) appli (qui ne fait rien).</p>
+<p>D’ici là, si besoin, toutes les sources nécessaires sont présentes <a href="https://github.com/ymansiaux/golemovh" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
+</div>
