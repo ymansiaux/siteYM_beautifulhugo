@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Bienvenue !</title>
+    <link>/tags/docker/</link>
+    <description>Recent content in Docker on Bienvenue !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</managingEditor>
+    <webMaster>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</webMaster>
+    <lastBuildDate>Thu, 11 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Déploiement d&#39;applis shiny et de plumber sur OVH</title>
+      <link>/post/deploy-ovh/</link>
+      <pubDate>Thu, 11 Aug 2022 00:00:00 +0000</pubDate>
+      <author>y.mansiaux@bordeaux-metropole.fr (Yohann Mansiaux)</author>
+      <guid>/post/deploy-ovh/</guid>
+      <description>Bonjour à tous,
+L’idée de cet article vient de ce sujet sur le slack grrr portant sur l’utilisation de solutions autres que shinyapps pour déployer des applications shiny.
+Au vu de cette conversation je me suis dit que j’allais tenter de déployer sur une machine virtuelle hébergée chez OVH, une application shiny et une API plumber. Le tout étant encapsulée dans une image Docker. N’ayant utilisé Docker que très rarement auparavant c’était également l’occasion de se lancer sur cette techno !</description>
+    </item>
+    
+  </channel>
+</rss>
