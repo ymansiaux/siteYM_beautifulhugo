@@ -7,8 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Bot twitter - Bienvenue !</title>
-  <meta name="description" content="Bot twitter sur l&#39;ouverture du pont Chaban Delmas à Bordeaux">
+  <title>Docker - Bienvenue !</title>
   <meta name="author" content="Yohann Mansiaux"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -29,64 +28,14 @@
   
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@id": "\/",
-          "name": "home"
-        }
-    },{
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@id": "\/post\/tools-bot-twitter\/",
-          "name": "Bot twitter"
-        }
-    }]
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": {
-    "name" : "Yohann Mansiaux"
-  },
-  "headline": "Bot twitter",
-  "description" : "Mini projet “jouet” pour tester l’implémentation d’un bot twitter.\nTous les matins, ce programme va publier l’état d’ouverture du pont Chaban Delmas à Bordeaux et les fermetures éventuelles dans la journée.\nLes données d’ouverture \/ fermeture prévisionnelles proviennent du portail open data de Bordeaux Métropole.\nLa publication des tweets est réalisée via le package {rtweet}.\nPour réaliser ce programme j’ai suivi le tuto super complet du créateur du bot londonmapbot.",
-  "inLanguage" : "fr",
-  "wordCount":  153 ,
-  "datePublished" : "2022-07-19T00:00:00",
-  "dateModified" : "2022-07-19T00:00:00",
-  "image" : "\/img\/YM.jpg",
-  "keywords" : [ "Outils, Bot" ],
-  "mainEntityOfPage" : "\/post\/tools-bot-twitter\/",
-  "publisher" : {
-    "@type": "Organization",
-    "name" : "\/",
-    "logo" : {
-        "@type" : "ImageObject",
-        "url" : "\/img\/YM.jpg",
-        "height" :  60 ,
-        "width" :  60
-    }
-  }
-}
-</script>
 
-<meta property="og:title" content="Bot twitter" />
-<meta property="og:description" content="Bot twitter sur l&#39;ouverture du pont Chaban Delmas à Bordeaux">
+<meta property="og:title" content="Docker" />
 <meta property="og:image" content="/img/YM.jpg" />
-<meta property="og:url" content="/post/tools-bot-twitter/" />
+<meta property="og:url" content="/tags/docker/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Bienvenue !" />
 
-  <meta name="twitter:title" content="Bot twitter" />
-  <meta name="twitter:description" content="Bot twitter sur l&#39;ouverture du pont Chaban Delmas à Bordeaux">
+  <meta name="twitter:title" content="Docker" />
   <meta name="twitter:image" content="/img/YM.jpg" />
   <meta name="twitter:card" content="summary" />
   <link href='../../img/LogoDataLab.ico' rel='icon' type='image/x-icon'/>
@@ -229,37 +178,14 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-heading">
+            <div class="tags-heading">
               
-                <h1>Bot twitter</h1>
-              
-              
-              
-                
-                  <h2 class="post-subheading">Bot twitter sur l&#39;ouverture du pont Chaban Delmas à Bordeaux</h2>
-                
+                <h1>Docker</h1>
               
               
-                <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posté le 19/07/2022
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;153&nbsp;mots
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Yohann Mansiaux
-    
-  
-  
-</span>
-
-
+                <hr class="small">
+              
+              
               
             </div>
           </div>
@@ -270,92 +196,73 @@
 
 
     
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-<script src="../../post/tools-bot-twitter/index.fr_files/header-attrs/header-attrs.js"></script>
-
-
-<p>Mini projet “jouet” pour tester l’implémentation d’un bot twitter.</p>
-<p>Tous les matins, ce programme va publier l’état d’ouverture du pont Chaban Delmas à Bordeaux et les fermetures éventuelles dans la journée.</p>
-<p>Les données d’ouverture / fermeture prévisionnelles proviennent du <a href="https://opendata.bordeaux-metropole.fr/explore/dataset/previsions_pont_chaban/information/">portail open data de Bordeaux Métropole</a>.</p>
-<p>La publication des tweets est réalisée via le package <em>{rtweet}</em>.</p>
-<p>Pour réaliser ce programme j’ai suivi le tuto super complet du créateur du bot <a href="https://github.com/matt-dray/londonmapbot">londonmapbot</a>.</p>
-<p>Pour utiliser <em>{rtweet}</em>, il est nécessaire d’avoir un compte développeur sur twitter de niveau Elevated. Tout est bien expliqué dans le tuto, et les liens vers la doc Twitter y sont présents.</p>
-<p>Les ressources suivantes m’ont également été utiles pour tout bien configurer :</p>
-<ul>
-<li><p><a href="https://docs.ropensci.org/rtweet/reference/index.html">Documentation de rtweet</a></p></li>
-<li><p><a href="https://www.r-bloggers.com/2022/01/tips-for-building-a-twitter-bot-with-r-and-github-actions/?utm_source=phpList&amp;utm_medium=email&amp;utm_campaign=R-bloggers-daily&amp;utm_content=HTML">Article de R bloggers</a></p></li>
-</ul>
-<p>Il s’agissait d’un premier test assez simple de l’utilisation de <em>{rtweet}</em>, avant d’envisager d’autres applications plus tard, peut-être plus utiles ;-)</p>
-<p>Les tweets sont publiés <a href="https://twitter.com/ymansiauxdata" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
-<p>Le code source est présent <a href="https://github.com/ymansiaux/bot_chaban" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
-
-
+        <div class="posts-list">
+          
+            <article class="post-preview">
+    <a href="../../post/deploy-ovh/">
+        <h2 class="post-title">Déploiement d&#39;applis shiny et de plumber sur OVH</h2>
         
-          <div class="blog-tags">
-            
-              <a href="//tags/outils/">Outils</a>&nbsp;
-            
-              <a href="//tags/bot/">Bot</a>&nbsp;
-            
-          </div>
-        
-
-        
-
-        
-          
-            
-          
-
-          
-                  <h4 class="see-also">Voir également</h4>
-                  <ul>
-                
-                
-                    <li><a href="../../post/site/">Site web perso</a></li>
-                
-                    <li><a href="../../post/tools-xtradata/">Package R xtradata</a></li>
-                
-                    <li><a href="../../post/tools-shinyym/">Package R shinyYM</a></li>
-                
-                    <li><a href="../../post/tools-leafletools/">Package R leaflettools</a></li>
-                
-                    <li><a href="../../post/tools-bdxmetroidentity/">Package R bdxmetroidentity</a></li>
-                
-              </ul>
-
-          
-        
-      </article>
-
-      
-        <ul class="pager blog-pager">
-          
-            <li class="previous">
-              <a href="../../post/site/" data-toggle="tooltip" data-placement="top" title="Site web perso">&larr; Post précédent</a>
-            </li>
-          
-          
-            <li class="next">
-              <a href="../../post/deploy-ovh/" data-toggle="tooltip" data-placement="top" title="Déploiement d&#39;applis shiny et de plumber sur OVH">Post suivant &rarr;</a>
-            </li>
-          
-        </ul>
-      
-
-
-      
+        <h3 class="post-subtitle">
+            Comment déployer sur OVH avec Docker ?
+        </h3>
         
         
-      
+        
+    </a>
 
+    <p class="post-meta">
+        <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posté le 11/08/2022
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1277&nbsp;mots
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Yohann Mansiaux
+    
+  
+  
+</span>
+
+
+    </p>
+    <div class="post-entry">
+         
+        
+        
+        
+    </div>
+
+    
+    <div class="blog-tags">
+        
+        <a href="//tags/shiny/">Shiny</a>&nbsp;
+        
+        <a href="//tags/plumber/">Plumber</a>&nbsp;
+        
+        <a href="//tags/docker/">Docker</a>&nbsp;
+        
+    </div>
+    
+
+</article>
+
+          
+        </div>
+        
+      </div>
     </div>
   </div>
-</div>
 
       
 <footer>
