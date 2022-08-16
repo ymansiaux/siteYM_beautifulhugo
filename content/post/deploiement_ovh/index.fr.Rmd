@@ -15,7 +15,7 @@ L'idée de cet article vient de ce sujet sur le slack grrr portant sur l'utilisa
 <img src="/img/deploy_ovh/01-slack.PNG" alt="conversation_grrr" width="75%"/>
 
 
-Au vu de cette conversation je me suis dit que j'allais tenter de déployer sur une machine virtuelle hébergée chez OVH, une application shiny et une API plumber. Le tout étant encapsulée dans une image Docker. N'ayant utilisé Docker que très rarement auparavant c'était également l'occasion de se lancer sur cette techno !
+Au vu de cette conversation je me suis dit que j'allais tenter de déployer sur une machine virtuelle hébergée chez OVH, une application shiny et une API plumber. Le tout étant encapsulé dans un conteneur Docker. N'ayant utilisé Docker que très rarement auparavant c'était également l'occasion de se lancer sur cette techno !
 
 ### Etape 1 : créer sa machine virtuelle sur OVH 
 
@@ -35,7 +35,7 @@ Pour lancer la config de Putty, je me rends d'abord sur l'interface d'OVH pour r
 
 <img src="/img/deploy_ovh/03-ovh_IP.PNG" alt="conversation_grrr" width="100%"/>
 
-Je me connecte via Putty sur la machine 51.178.45.193, une fois que c'est fait je créé 2 répertoires de travail, l'un pour mon appli shiny (développée avec le package R _{golem}_) et l'autre pour mon API (dévelopée avec le package R _{plumber}_).
+Je me connecte via Putty sur la machine 51.178.45.193, une fois que c'est fait je créé 2 répertoires de travail, l'un pour mon appli shiny (développée avec le package R _{golem}_) et l'autre pour mon API (développée avec le package R _{plumber}_).
 
 <img src="/img/deploy_ovh/04-putty.PNG" alt="conversation_grrr" width="100%"/>
 
@@ -75,7 +75,7 @@ On peut voir qu'on a fait référence à l'image _mydockergolem_. Shiny utilise 
 
 Pour vérifier que notre conteneur Docker est bien actif on utilise la commande `docker ps`.
 
-<img src="/img/deploy_ovh/07-docker_ps.PNG" alt="conversation_grrr" width="1200px"/>
+<img src="/img/deploy_ovh/07-docker_ps.PNG" alt="conversation_grrr"/>
 
 Il est bien présent, tout est ok, mais il va falloir être encore un peu patient pour pouvoir aller consulter notre (super) appli (qui ne fait rien).
 
@@ -87,7 +87,7 @@ L'objectif de cet article n'est pas de détailler le fonction du package _{plumb
 
 Pour en savoir plus, rdv sur la <a href="https://www.rplumber.io/" target="_blank" rel="noopener noreferrer" class="button">doc officielle</a>.
 
-En me basant sur la documentation, j'ai développé mon fichier `plumber.R`, qui contient 2 fonctions toutes simples, _normalMean_ qui va renvoyer la moyenne de 10 nombres tirés aléatoirement dans une loi normal, et _randomPlot_ qui va faire un histogramme de 100 valeurs tirées également dans une loi normale.
+En me basant sur la documentation, j'ai développé mon fichier `plumber.R`, qui contient 2 fonctions toutes simples, _normalMean_ qui va renvoyer la moyenne de 10 nombres tirés aléatoirement dans une loi normale, et _randomPlot_ qui va faire un histogramme de 100 valeurs tirées également dans une loi normale.
 
 Toujours grâce à la documentation, dans la section Hosting, je trouve toutes les infos relatives à la création de mon Dockerfile.
 
@@ -108,6 +108,8 @@ Ici on voit qu'on fait référence au port 8000, il va falloir garder ca en têt
 En l'état, comme pour l'appli shiny, ca ne fonctionne pas :(
 
 Il va falloir retourner du côté de l'interface Web de gestion de ma machine virtuelle pour gérer l'ouverture des ports dans le pare feu.
+
+D'ici là, si besoin, toutes les sources nécessaires sont présentes <a href="https://github.com/ymansiaux/plumberovh" target="_blank" rel="noopener noreferrer" class="button">ici</a>.
 
 
 ### Etape 4 : ouverture des ports dans le pare feu

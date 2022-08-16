@@ -34,8 +34,7 @@ published: true
 <p>Idem, étant un utilisateur “pas novice mais pas loin” de Docker, je ne me permettrais pas de faire un tuto spécifique dans cet article, si vous souhaitez en apprendre davantage je vous invite à consulter de la doc sur le sujet.</p>
 <p>Une fois notre appli créée (ici j’utilise une appli “coquille vide” qui ne fait absolument rien si ce n’est afficher son nom), on créé une fichier tar.gz avec les sources du package correspondant via la commande <code>devtools::build()</code>.</p>
 <p>J’utilise ensuite les fonctionnalités de <em>{golem}</em> pour créer un fichier crucial, qui est en quelque sorte la recette de cuisine de création de l’image Docker : le Dockerfile. Pour cela je me repose sur la fonction <code>golem::add_dockerfile()</code>.</p>
-<p>J’obtiens un fichier comme ceci, qui va me permettre d’avoir tous les composants essentiels pour faire tourner mon appli.</p>
-<p><img src="/img/deploy_ovh/05-dockerfile.PNG" alt="conversation_grrr" width="100%"/></p>
+<p>J’obtiens un fichier comme <a href="https://github.com/ymansiaux/golemovh/blob/master/Dockerfile" target="_blank" rel="noopener noreferrer" class="button">ceci</a>, qui va me permettre d’avoir tous les composants essentiels pour faire tourner mon appli.</p>
 <p>Pour s’assurer que tout fonctionne pour la création de mon image Docker, je dépose mon Dockerfile et le tar.gz de mon package dans le même répertoire sur ma machine virtuelle.</p>
 <p><img src="/img/deploy_ovh/06-putty2.PNG" alt="conversation_grrr" width="60%"/></p>
 <p>J’ai personnellement utilisé WinSCP pour réaliser ces opérations. On aurait pu le faire de manière plus propre en clonant le contenu d’un dépôt Github notamment. Pour faire du “vrai” déploiement d’appli, j’utiliserais cette méthode.</p>
@@ -46,7 +45,7 @@ published: true
 <pre class="r"><code>docker run -d -p 3838:3838 --rm mydockergolem</code></pre>
 <p>On peut voir qu’on a fait référence à l’image <em>mydockergolem</em>. Shiny utilise le port 3838 pour son fonctionnement, on montrera plus loin dans cet article comment gérer cette partie.</p>
 <p>Pour vérifier que notre conteneur Docker est bien actif on utilise la commande <code>docker ps</code>.</p>
-<p><img src="/img/deploy_ovh/07-docker_ps.PNG" alt="conversation_grrr" width="1200px"/></p>
+<p><img src="/img/deploy_ovh/07-docker_ps.PNG" alt="conversation_grrr"/></p>
 <p>Il est bien présent, tout est ok, mais il va falloir être encore un peu patient pour pouvoir aller consulter notre (super) appli (qui ne fait rien).</p>
 <p>D’ici là, si besoin, toutes les sources nécessaires sont présentes <a href="https://github.com/ymansiaux/golemovh" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
 </div>
