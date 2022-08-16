@@ -1,6 +1,6 @@
 ---
 title: Déploiement d'applis shiny et de plumber sur OVH
-subtitle: Comment déployer des outils sur OVH avec Docker ?
+subtitle: Comment déployer sur OVH avec Docker ?
 author: Yohann Mansiaux
 date: '2022-08-11'
 slug: deploy-ovh
@@ -24,12 +24,12 @@ published: true
 <p>Une fois que tout est configuré et que le paiement est fait, il faut attendre quelques minutes avant de recevoir la confirmation par mail que la machine virtuelle est utilisable.</p>
 <p>Je vous invite fortement à consulter cette <a href="https://docs.ovh.com/fr/vps/debuter-avec-vps/" target="_blank" rel="noopener noreferrer" class="button">vidéo</a> pour vous familiariser avec l’utilisation de ces outils. Il est notamment expliqué comment configurer le logiciel Putty, qui permettra, entre autres, d’utiliser Docker via l’interface en ligne de commandes, pour déployer nos outils.</p>
 <p>Pour lancer la config de Putty, je me rends d’abord sur l’interface d’OVH pour retrouver l’IP de ma machine virtuelle, et constate qu’elle répond au doux nom de vps-1d32547a.vps.ovh.net, que l’OS installé est Debian 10, et que Docker est également bien installé.</p>
-<p><img src="/img/deploy_ovh/03-ovh_IP.PNG" alt="conversation_grrr" width="75%"/></p>
-<p>Je me connecte via Putty sur la machine 51.178.45.193, une fois que c’est fait je créé 2 répertoires de travail, l’un pour mon appli Shiny (développée avec le package R <em>{golem}</em>) et l’autre pour mon API (dévelopée avec le package R <em>{plumber}</em>).</p>
-<p><img src="/img/deploy_ovh/04-putty.PNG" alt="conversation_grrr" width="75%"/></p>
+<p><img src="/img/deploy_ovh/03-ovh_IP.PNG" alt="conversation_grrr" width="100%"/></p>
+<p>Je me connecte via Putty sur la machine 51.178.45.193, une fois que c’est fait je créé 2 répertoires de travail, l’un pour mon appli shiny (développée avec le package R <em>{golem}</em>) et l’autre pour mon API (dévelopée avec le package R <em>{plumber}</em>).</p>
+<p><img src="/img/deploy_ovh/04-putty.PNG" alt="conversation_grrr" width="100%"/></p>
 </div>
 <div id="etape-2-création-de-lapplication-shiny-et-déploiement" class="section level3">
-<h3>Etape 2 : création de l’application Shiny et déploiement</h3>
+<h3>Etape 2 : création de l’application shiny et déploiement</h3>
 <p>On part du principe que vous savez créer une appli via le package <em>{golem}</em>, si ce n’est pas le cas, je vous invite à vous diriger vers la <a href="https://github.com/ThinkR-open/golem" target="_blank" rel="noopener noreferrer" class="button">documentation dédiée</a>.</p>
 <p>Idem, étant un utilisateur “pas novice mais pas loin” de Docker, je ne me permettrais pas de faire un tuto spécifique dans cet article, si vous souhaitez en apprendre davantage je vous invite à consulter de la doc sur le sujet.</p>
 <p>Une fois notre appli créée (ici j’utilise une appli “coquille vide” qui ne fait absolument rien si ce n’est afficher son nom), on créé une fichier tar.gz avec les sources du package correspondant via la commande <code>devtools::build()</code>.</p>
@@ -46,7 +46,58 @@ published: true
 <pre class="r"><code>docker run -d -p 3838:3838 --rm mydockergolem</code></pre>
 <p>On peut voir qu’on a fait référence à l’image <em>mydockergolem</em>. Shiny utilise le port 3838 pour son fonctionnement, on montrera plus loin dans cet article comment gérer cette partie.</p>
 <p>Pour vérifier que notre conteneur Docker est bien actif on utilise la commande <code>docker ps</code>.</p>
-<p><img src="/img/deploy_ovh/07-docker_ps.PNG" alt="conversation_grrr" width="90%"/></p>
+<p><img src="/img/deploy_ovh/07-docker_ps.PNG" alt="conversation_grrr" width="1200px"/></p>
 <p>Il est bien présent, tout est ok, mais il va falloir être encore un peu patient pour pouvoir aller consulter notre (super) appli (qui ne fait rien).</p>
 <p>D’ici là, si besoin, toutes les sources nécessaires sont présentes <a href="https://github.com/ymansiaux/golemovh" target="_blank" rel="noopener noreferrer" class="button">ici</a>.</p>
+</div>
+<div id="etape-3-création-de-lapi-plumber-et-déploiement" class="section level3">
+<h3>Etape 3 : création de l’API plumber et déploiement</h3>
+<p>L’objectif de cet article n’est pas de détailler le fonction du package <em>{plumber}</em>, mais juste de montrer comment héberger l’API créée.</p>
+<p>Pour en savoir plus, rdv sur la <a href="https://www.rplumber.io/" target="_blank" rel="noopener noreferrer" class="button">doc officielle</a>.</p>
+<p>En me basant sur la documentation, j’ai développé mon fichier <code>plumber.R</code>, qui contient 2 fonctions toutes simples, <em>normalMean</em> qui va renvoyer la moyenne de 10 nombres tirés aléatoirement dans une loi normal, et <em>randomPlot</em> qui va faire un histogramme de 100 valeurs tirées également dans une loi normale.</p>
+<p>Toujours grâce à la documentation, dans la section Hosting, je trouve toutes les infos relatives à la création de mon Dockerfile.</p>
+<p>Je copie mon fichier <code>plumber.R</code> et mon Dockerfile sur ma machine virtuelle, dans le répertoire plumber.</p>
+<p>Comme pour mon application shiny, je vais enchainer consécutivement une commande <code>docker build</code> pour une commande <code>docker run</code>.</p>
+<pre class="r"><code>docker build -t mydockerplumber .</code></pre>
+<pre class="r"><code>docker run -d -p 8000:8000 --rm -vpwd:/app mydockerplumber</code></pre>
+<p>Ici on voit qu’on fait référence au port 8000, il va falloir garder ca en tête pour la suite (on se rappelle déjà du port 3838 pour shiny). Etant loin d’être expert sur ces sujets, je vous laisse consulter de la doc dédiée si nécessaire.</p>
+<p>En l’état, comme pour l’appli shiny, ca ne fonctionne pas :(</p>
+<p>Il va falloir retourner du côté de l’interface Web de gestion de ma machine virtuelle pour gérer l’ouverture des ports dans le pare feu.</p>
+</div>
+<div id="etape-4-ouverture-des-ports-dans-le-pare-feu" class="section level3">
+<h3>Etape 4 : ouverture des ports dans le pare feu</h3>
+<p>Pour cette partie, je me suis largement inspiré de l’article de Charles Bordet sur <a href="https://www.charlesbordet.com/fr/guide-shiny-aws/" target="_blank" rel="noopener noreferrer" class="button">l’ouverture des ports pour une machine sur AWS</a>, merci à lui !</p>
+<p>Sur mon <a href="https://www.ovh.com/manager/" target="_blank" rel="noopener noreferrer" class="button">interface de gestion OVH</a>, je choisis la section “IP” sur le menu latéral de gauche pour après avoir cliqué sur les “…” je choisis “Configure the firewall”.</p>
+<p><img src="/img/deploy_ovh/08-firewall.PNG" alt="conversation_grrr"/></p>
+<p>Ensuite je vais demander l’ouverture du port 3838 (pour mon appli shiny) et du port 8000 (pour mon API plumber), en utilisant “Add a rule”.</p>
+<p><img src="/img/deploy_ovh/09-firewall2.PNG" alt="conversation_grrr"/></p>
+</div>
+<div id="etape-5-alors-ca-marche-ou-ca-marche-pas" class="section level3">
+<h3>Etape 5 : alors ca marche ou ca marche pas ?</h3>
+<p>A priori tout est ok ! On connait par coeur l’IP de notre machine (51.178.45.193) et on a ouvert les ports nécessaires.</p>
+<p>Essayons maintenant d’afficher notre appli shiny, dans le navigateur on tape <a href="http://51.178.45.193:3838" class="uri">http://51.178.45.193:3838</a>.</p>
+<p><img src="/img/deploy_ovh/10-shinyOK.PNG" alt="conversation_grrr"/></p>
+<p>Comme attendu, cette appli ne fait rien de bien transcendant mais ca fonctionne !</p>
+<p>Maintenant essayons d’utiliser notre API construite avec mon plumber. On se rappelle dans notre fichier <code>plumber.R</code>, on a 2 fonctions : <em>normalMean</em> et <em>randomPlot</em>. Elles ne prennent aucun paramètre en entrée, et s’appellent respectivement en utilisant <a href="http://monip/mean" class="uri">http://monip/mean</a> et <a href="http://monip/plot" class="uri">http://monip/plot</a>.</p>
+<p>Testons l’appel à la fonction <em>normalMean</em> avec <a href="http://51.178.45.193:8000/mean" class="uri">http://51.178.45.193:8000/mean</a> :</p>
+<p><img src="/img/deploy_ovh/11-plumbermeanOK.PNG" alt="conversation_grrr"/></p>
+<p>Et maintenant la fonction <em>randomPlot</em> avec <a href="http://51.178.45.193:8000/plot" class="uri">http://51.178.45.193:8000/plot</a> :</p>
+<p><img src="/img/deploy_ovh/12-plumberplotOK.PNG" alt="conversation_grrr"/></p>
+<p>Ici aussi tout semble OK ! :)</p>
+</div>
+<div id="conclusion" class="section level3">
+<h3>Conclusion</h3>
+<p>Vous voici arrivés au bout de ce tuto rapide sur le déploiement d’applis shiny et d’API plumber sur OVH.</p>
+<p>Certains sujets, comme shiny et plumber, sont survolés car probablement trop conséquents pour être abordés dans cet article.</p>
+<p>D’autres, comme Docker ou les ports à ouvrir pour la transmission de données, sont également peu fouillés tout simplement car je suis plutôt novice sur ces questions.</p>
+<p>Dans les améliorations possibles, si l’on souhaitait par exemple héberger des applis ou API de manière plus professionnelles, on pourrait imaginer faire l’acquisition d’un nom de domaine (une adresse IP n’étant pas le nom le plus sexy qui soit) ou passer à une formule plus onéreuse chez OVH pour avoir plus de ressources.</p>
+</div>
+<div id="ressources-utiles" class="section level3">
+<h3>Ressources utiles</h3>
+<ul>
+<li><a href="https://www.charlesbordet.com/fr/guide-shiny-aws/" class="uri">https://www.charlesbordet.com/fr/guide-shiny-aws/</a></li>
+<li><a href="https://rtask.thinkr.fr/fr/comment-developper-dans-un-conteneur-docker-pour-faciliter-la-collaboration/" class="uri">https://rtask.thinkr.fr/fr/comment-developper-dans-un-conteneur-docker-pour-faciliter-la-collaboration/</a></li>
+<li><a href="https://thinkr.fr/dockeriser-application-shiny/" class="uri">https://thinkr.fr/dockeriser-application-shiny/</a></li>
+<li><a href="https://thinkr.fr/deploiement-dune-application-shiny-dans-docker-avec-renv-et-golem/" class="uri">https://thinkr.fr/deploiement-dune-application-shiny-dans-docker-avec-renv-et-golem/</a></li>
+</ul>
 </div>
